@@ -15,7 +15,12 @@
         "Laura Craig, FNP-C",
         "Stephanie Tyson, NP"
       ],
-      "image": "/assets/dashboard.png"
+      "image": "/assets/dashboard.png",
+      "hours": [
+        "Mon\u2013Fri 8:00 AM\u20135:00 PM",
+        "Sat 9:00 AM\u20131:00 PM",
+        "Sun Closed"
+      ]
     },
     {
       "name": "Prestige Pediatrics in Jasper",
