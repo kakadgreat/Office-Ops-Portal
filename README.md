@@ -1,3 +1,2 @@
 # PMG Office Ops Portal
-Generated 2025-08-21.
-Adds Calendars and IT Help pages.
+v0.2.0 2025-08-21

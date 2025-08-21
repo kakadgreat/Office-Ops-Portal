@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+img{max-height:180px; object-fit:cover}
+.card-img{max-height:140px}
+.hero-img{max-height:220px}

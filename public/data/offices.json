@@ -1,54 +1,74 @@
 {
-  "heroImage": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2701/officeThumb_1.png",
   "locations": [
     {
       "name": "Jasper Primary Care",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2701/officeThumb_1.png",
-      "county": "Pickens"
+      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group-9",
+      "address": "51 Gordon Rd, Jasper, GA 30143",
+      "county": "Pickens",
+      "providers": [
+        "Dr. Anil Yadav, MD",
+        "Lottie Davenport, NP",
+        "Amy Mitton, NP",
+        "Sasha Milks, NP",
+        "Kimberly Parker, FNP-BC",
+        "Daniel Dean, FNP-BC",
+        "Laura Craig, FNP-C",
+        "Stephanie Tyson, NP"
+      ],
+      "image": "/assets/dashboard.png"
     },
     {
       "name": "Prestige Pediatrics in Jasper",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2702/officeThumb_3.png",
+      "url": "https://www.prestigepediatrics.org",
+      "address": "53 Gordon Rd, Suite 101, Jasper, GA 30143",
       "county": "Pickens"
     },
     {
       "name": "Jasper MedSpa",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2708/officeThumb_1.png",
+      "url": "https://www.prestigemedspa.org/contact-us/jasper",
+      "address": "51 Gordon Rd, Jasper, GA 30143",
       "county": "Pickens"
     },
     {
-      "name": "Roswell Primary Care",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2706/officeThumb_1.png",
-      "county": "Fulton"
-    },
-    {
-      "name": "Roswell MedSpa",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2703/officeThumb_0.png",
-      "county": "Fulton"
-    },
-    {
       "name": "Canton Primary Care",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2705/officeThumb_2.png",
+      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group-6",
+      "address": "3755 Sixes Rd, Suite 300, Canton, GA 30114",
       "county": "Cherokee"
     },
     {
       "name": "Prestige Pediatrics in Canton",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2709/officeThumb_0.png",
+      "url": "https://www.prestigemedicalgroup.org/location/prestige-pediatrics-in-canton",
+      "address": "3755 Sixes Rd, Suite 101, Canton, GA 30114",
       "county": "Cherokee"
     },
     {
-      "name": "Canton MedSpa",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2704/officeThumb_0.png",
+      "name": "Canton MedSpa (Sixes)",
+      "url": "https://www.prestigemedspa.org/location/canton",
+      "address": "3755 Sixes Rd, Suite 303, Canton, GA 30114",
       "county": "Cherokee"
+    },
+    {
+      "name": "Roswell Primary Care",
+      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group-8",
+      "address": "12020 Etris Rd, Suite B110, Roswell, GA 30075",
+      "county": "Fulton"
+    },
+    {
+      "name": "Roswell MedSpa",
+      "url": "https://www.prestigemedspa.org/contact-us/roswell",
+      "address": "12020 Etris Rd, Suite B110-B, Roswell, GA 30075",
+      "county": "Fulton"
     },
     {
       "name": "Rome Primary Care",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2710/officeThumb_0.png",
+      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group-1-9",
+      "address": "415 E 2nd Ave, Suite A, Rome, GA 30161",
       "county": "Floyd"
     },
     {
       "name": "Rome MedSpa",
-      "image": "https://storage.googleapis.com/treatspace-prod-media/thumb/o-2704/officeThumb_0.png",
+      "url": "https://www.prestigemedspa.org/location/rome",
+      "address": "415 E 2nd Ave, Suite A, Rome, GA 30161",
       "county": "Floyd"
     }
   ]
