@@ -1,3 +1,16 @@
 {
-  "items": []
+  "items": [
+    {
+      "name": "Primary Care",
+      "scope": "Clinical ops & patient services"
+    },
+    {
+      "name": "Pediatrics",
+      "scope": "Jasper & Canton pediatric clinics"
+    },
+    {
+      "name": "MedSpa",
+      "scope": "Aesthetics services & marketing"
+    }
+  ]
 }

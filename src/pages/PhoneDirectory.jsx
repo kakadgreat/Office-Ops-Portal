@@ -1,20 +1,21 @@
 import React from 'react'
 import Card from '../ui/Card.jsx'
-function sortBy(col, asc){ return (a,b)=> (''+(a[col]??'')).localeCompare((''+(b[col]??'')), undefined, {numeric:true,sensitivity:'base'}) * (asc?1:-1) }
+const DEPT_ORDER = ['Providers','MA','Front Desk','Spa']
+const scoreDept = (d) => { const i = DEPT_ORDER.indexOf(d||''); return i >= 0 ? i : 99 }
 export default function PhoneDirectory({ data, query }){
   if(!data) return <div>Loading...</div>
-  const [loc, setLoc] = React.useState('All')
-  const [dept, setDept] = React.useState('All')
-  const [sort, setSort] = React.useState({col:'name', asc:true})
   const all = data.phone.items || []
-  const locations = ['All', ...Array.from(new Set(all.map(r=>r.location))).sort()]
-  const depts = ['All', ...Array.from(new Set(all.map(r=>r.dept))).sort()]
-  let items = all
-  if(loc!=='All') items = items.filter(r=>r.location===loc)
-  if(dept!=='All') items = items.filter(r=>r.dept===dept)
+  const [selLoc, setSelLoc] = React.useState(new Set())
+  const [selDept, setSelDept] = React.useState(new Set())
   const q = (query||'').toLowerCase()
+  const toggle = (set, value) => { const next=new Set(set); next.has(value)?next.delete(value):next.add(value); return next }
+  const locations = Array.from(new Set(all.map(r=>r.location).filter(Boolean))).sort()
+  const depts = Array.from(new Set(all.map(r=>r.dept).filter(Boolean))).sort((a,b)=> scoreDept(a)-scoreDept(b) || a.localeCompare(b))
+  let items = all
+  if(selLoc.size>0) items = items.filter(r=>selLoc.has(r.location))
+  if(selDept.size>0) items = items.filter(r=>selDept.has(r.dept))
   if(q) items = items.filter(r => [r.name, r.ext, r.location, r.dept].join(' ').toLowerCase().includes(q))
-  items = [...items].sort(sortBy(sort.col, sort.asc))
-  const Pill = ({value, current, onClick}) => <button onClick={()=>onClick(value)} className={`px-3 py-1 rounded-full border text-sm ${current===value?'bg-gray-200':'bg-white hover:bg-gray-100'}`}>{value}</button>
-  const header = (label, col) => <th onClick={()=>setSort({col, asc: sort.col===col ? !sort.asc : true})} className='px-3 py-2 cursor-pointer text-left select-none'>{label}{sort.col===col ? (sort.asc ? ' ▲' : ' ▼') : ''}</th>
-  return (<div className='space-y-4'><Card title='Filters'><div className='flex flex-wrap gap-2 items-center'><div className='font-semibold mr-2'>Location:</div>{locations.map(v=> <Pill key={v} value={v} current={loc} onClick={setLoc}/>)}</div><div className='flex flex-wrap gap-2 items-center mt-3'><div className='font-semibold mr-2'>Dept:</div>{depts.map(v=> <Pill key={v} value={v} current={dept} onClick={setDept}/>)}</div></Card><div className='overflow-auto rounded-xl border bg-white'><table className='w-full text-sm'><thead className='bg-gray-50 border-b'><tr>{header('Name','name')}{header('Ext','ext')}{header('Location','location')}{header('Dept','dept')}</tr></thead><tbody>{items.map((r,i)=>(<tr key={i} className='border-b last:border-0'><td className='px-3 py-2'>{r.name}</td><td className='px-3 py-2'>{r.ext}</td><td className='px-3 py-2'>{r.location}</td><td className='px-3 py-2'>{r.dept}</td></tr>))}</tbody></table></div></div>) }
+  items = [...items].sort((a,b)=> scoreDept(a.dept)-scoreDept(b.dept) || (a.name||'').localeCompare(b.name||''))
+  const Pill = ({label, active, onClick}) => <button onClick={onClick} className={`pill ${active?'on':'off'}`}>{label}</button>
+  return (<div className='space-y-4'><Card title='Filters'><div className='flex flex-wrap gap-2 items-center'><div className='font-semibold mr-2'>Location:</div>{locations.map(v=> <Pill key={v} label={v} active={selLoc.has(v)} onClick={()=>setSelLoc(toggle(selLoc,v))}/>)}</div><div className='flex flex-wrap gap-2 items-center mt-3'><div className='font-semibold mr-2'>Dept:</div>{depts.map(v=> <Pill key={v} label={v} active={selDept.has(v)} onClick={()=>setSelDept(toggle(selDept,v))}/>)}</div></Card><div className='overflow-auto rounded-xl border bg-white table-zebra'><table className='w-full text-sm'><thead className='bg-gray-50 border-b'><tr><th className='px-3 py-2 text-left'>Name</th><th className='px-3 py-2 text-left'>Ext</th><th className='px-3 py-2 text-left'>Location</th><th className='px-3 py-2 text-left'>Dept</th></tr></thead><tbody>{items.map((r,i)=>(<tr key={i} className='border-b last:border-0'><td className='px-3 py-2'>{r.name}</td><td className='px-3 py-2'>{r.ext}</td><td className='px-3 py-2'>{r.location}</td><td className='px-3 py-2'>{r.dept}</td></tr>))}</tbody></table></div><div className='text-xs text-gray-500'>To add/edit directory entries, go to the <a className='underline' href='/phone/edit'>Editor</a>.</div></div>)
+}

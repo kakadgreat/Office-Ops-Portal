@@ -1,3 +1,1 @@
-import React from 'react'
-import Card from '../ui/Card.jsx'
-export default function ITHelp(){ return (<div className='grid gap-4'><Card title='Computer Help Vendor'><div><b>Inacomp</b> — 770-255-1022</div></Card><Card title='Epic Help Desk'><div><b>Epic Community Connect</b> — 404-605-3000</div><div className='text-gray-600 text-sm'>Always tell them we are part of Epic Community Connect.</div></Card></div>) }
+import React from 'react'; import Card from '../ui/Card.jsx'; export default function ITHelp({data}){ const it=(data?.ithelp?.items)||[]; return <div className='grid gap-4'>{it.map((x,i)=>(<Card key={i} title={i===0?'Computer Help Vendor':'Epic Help Desk'}><div>{x}</div></Card>))}</div> }

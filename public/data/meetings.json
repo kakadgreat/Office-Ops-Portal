@@ -5,32 +5,8 @@
       "schedule": "1st Tuesday monthly"
     },
     {
-      "name": "Front Office (Jasper)",
-      "schedule": "1st Thursday monthly"
-    },
-    {
-      "name": "Call Center (Jasper)",
-      "schedule": "2nd Thursday monthly"
-    },
-    {
       "name": "All Spa Staff",
       "schedule": "3rd Tuesday monthly"
-    },
-    {
-      "name": "MA (Jasper)",
-      "schedule": "3rd Thursday monthly"
-    },
-    {
-      "name": "All Rome Staff",
-      "schedule": "4th Tuesday monthly"
-    },
-    {
-      "name": "MA (Sixes/Roswell/Rome)",
-      "schedule": "4th Wednesday monthly"
-    },
-    {
-      "name": "Admin Meeting",
-      "schedule": "4th Thursday monthly (or as scheduled by Dr. Yadav)"
     }
   ]
 }

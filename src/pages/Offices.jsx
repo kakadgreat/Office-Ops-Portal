@@ -1,3 +1,35 @@
 import React from 'react'
 import Card from '../ui/Card.jsx'
-export default function Offices({ data, query }){ if(!data) return <div>Loading...</div>; const q=(query||'').toLowerCase(); const items=data.offices.locations.filter(o=>[o.name,(o.address||''),(o.county||''),(o.notes||''),(o.providers||[]).join(' ')].join(' ').toLowerCase().includes(q)); return (<div className='grid gap-4'>{items.map((o,i)=>(<Card key={i} title={o.name}><div className='space-y-2'>{o.image&&<img src={o.image} alt={o.name} className='w-full rounded-xl border card-img'/>}{o.address&&<div><b>Address:</b> {o.address}</div>}{o.county&&<div><b>County:</b> {o.county}</div>}{o.hours&&<div><b>Hours:</b> {o.hours}</div>}{o.providers?.length>0&&<div><b>Providers:</b> {o.providers.join(', ')}</div>}{o.url&&<div><a className='underline' href={o.url} target='_blank' rel='noreferrer'>Location page</a></div>}{o.notes&&<div className='text-gray-600'>{o.notes}</div>}</div></Card>))}</div>) }
+export default function Offices({ data, query }){
+  if(!data) return <div>Loading...</div>
+  const [counties, setCounties] = React.useState(new Set())
+  const [names, setNames] = React.useState(new Set())
+  const q = (query||'').toLowerCase()
+  const toggle = (set, value) => { const next=new Set(set); next.has(value)?next.delete(value):next.add(value); return next }
+  const all = data.offices.locations || []
+  const countyList = Array.from(new Set(all.map(o=>o.county).filter(Boolean))).sort()
+  const nameList = Array.from(new Set(all.map(o=>o.name))).sort()
+  let items = all
+  if(counties.size>0) items = items.filter(o=>counties.has(o.county))
+  if(names.size>0) items = items.filter(o=>names.has(o.name))
+  if(q) items = items.filter(o => [o.name, o.address, o.county, (o.providers||[]).join(' ')].join(' ').toLowerCase().includes(q))
+  const Pill = ({label, active, onClick}) => <button onClick={onClick} className={`pill ${active?'on':'off'}`}>{label}</button>
+  return (<div className='space-y-4'>
+    <div className='sticky-top bg-white border rounded-xl p-3 space-y-2'>
+      <div className='text-sm font-semibold'>Filter by County</div>
+      <div className='flex flex-wrap gap-2'>{countyList.map(c => <Pill key={c} label={c} active={counties.has(c)} onClick={()=>setCounties(toggle(counties,c))}/>)}</div>
+      <div className='text-sm font-semibold mt-2'>Filter by Location</div>
+      <div className='flex flex-wrap gap-2'>{nameList.map(n => <Pill key={n} label={n} active={names.has(n)} onClick={()=>setNames(toggle(names,n))}/>)}</div>
+    </div>
+    <div className='grid md:grid-cols-2 gap-4'>
+      {items.map((o,i)=>(<Card key={i} title={o.name}>
+        <div className='space-y-2'>
+          {o.address && <div><b>Address:</b> {o.address}</div>}
+          {o.county && <div><b>County:</b> {o.county}</div>}
+          {o.providers?.length>0 && <div><b>Providers:</b> {o.providers.join(', ')}</div>}
+          {o.url && <div><a className='underline' href={o.url} target='_blank' rel='noreferrer'>Location page</a></div>}
+        </div>
+      </Card>))}
+    </div>
+  </div>)
+}
