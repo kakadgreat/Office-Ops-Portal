@@ -1,0 +1,36 @@
+{
+  "channels": [
+    {
+      "name": "City Lifestyle",
+      "summary": "Full-page and half-page ads; editorial features; collaboration in Canva.",
+      "contacts": [
+        "Chicka Elloy"
+      ],
+      "links": []
+    },
+    {
+      "name": "Lamar \u2014 Rome Billboard",
+      "summary": "Digital billboard Jul 2024\u2013Jun 2025; $1,750/month; not renewed after Jun 2025.",
+      "contacts": [
+        "Justin Laseter"
+      ],
+      "links": []
+    },
+    {
+      "name": "MyGymTV (OneLife Fitness)",
+      "summary": "Screens in Holly Springs & Alpharetta gyms; managed via MyGymTV portal.",
+      "contacts": [
+        "Melanie Rathman"
+      ],
+      "links": []
+    },
+    {
+      "name": "Newsletters (Constant Contact)",
+      "summary": "Sent around 1st\u20133rd monthly. Graphics via Canva; video via Vimeo.",
+      "contacts": [
+        "Maggie Wilson (spa flyer)"
+      ],
+      "links": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "name": "Microsoft Forms (Requests)",
+      "purpose": "Facilities/IT/Service intake",
+      "links": [
+        {
+          "label": "Form (staff)",
+          "href": "https://forms.office.com/r/RThattgVkJ"
+        }
+      ],
+      "notes": "Auto-acknowledge, copy supervisors; export to Excel/OneDrive."
+    },
+    {
+      "name": "Calendly \u2014 Canton Lounge",
+      "purpose": "Reserve lower level space",
+      "links": [
+        {
+          "label": "Book",
+          "href": "https://calendly.com/canton-lounge"
+        }
+      ]
+    },
+    {
+      "name": "Canva",
+      "purpose": "Designs for ads, newsletters, flyers",
+      "links": [],
+      "notes": "Access via owner invite; do not store credentials in this app."
+    },
+    {
+      "name": "PatientPoint",
+      "purpose": "Ratings & Reviews; patient room TV",
+      "links": [],
+      "notes": "Respond publicly only to Google reviews; acknowledge PatientPoint internally."
+    }
+  ]
+}

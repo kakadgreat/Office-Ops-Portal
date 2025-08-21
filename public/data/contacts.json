@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "name": "Sophia Klumb",
+      "company": "Greater North Fulton Chamber",
+      "role": "Member Experience Manager",
+      "phone": "678-397-0554",
+      "email": "",
+      "notes": "Training and events available; see GNFCC calendar."
+    },
+    {
+      "name": "Justin Laseter",
+      "company": "Lamar (Rome Billboard)",
+      "role": "Sales AE",
+      "phone": "",
+      "email": "",
+      "notes": "Monthly cost $1,750; Rome board ID 71496 (Jul 2024\u2013Jun 2025)."
+    },
+    {
+      "name": "Melanie Rathman",
+      "company": "MyGymTV",
+      "role": "",
+      "phone": "",
+      "email": "MelanieRathman@gymtv.com"
+    },
+    {
+      "name": "Erin Blondin",
+      "company": "IDS",
+      "role": "Sr. Creative Consultant",
+      "phone": "",
+      "email": "erin@idskids.com"
+    },
+    {
+      "name": "Leslie Roper",
+      "company": "PMG",
+      "role": "Practice Manager",
+      "phone": "",
+      "email": ""
+    }
+  ]
+}

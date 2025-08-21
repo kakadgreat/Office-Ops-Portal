@@ -1,0 +1,77 @@
+{
+  "locations": [
+    {
+      "name": "HQ \u2014 Jasper / Prestige Pediatrics",
+      "address": "51\u201353 Gordon Rd, Jasper, GA",
+      "county": "Pickens",
+      "hours": "Mon\u2013Fri 8a\u20135p (12:30\u20131:30 lunch)",
+      "providers": [
+        "Dr. Anil Yadav (some Mon/Thu)",
+        "Trina Chastain (Finance)",
+        "Tracy Clark (Asst. Finance)",
+        "Laura Hughes (HR M\u2013R)"
+      ],
+      "managers": [
+        "Leslie Roper (Thu)"
+      ],
+      "notes": "Call Center and HR based here."
+    },
+    {
+      "name": "Canton (Sixes) \u2014 Pediatrics on site",
+      "address": "3655 Sixes Rd, Canton, GA",
+      "county": "Cherokee",
+      "providers": [
+        "Dr. Yadav (Tue/Wed)",
+        "Dr. Monika (Wed)",
+        "Dr. Asghar (Mon/Tue/Thu)",
+        "Dr. Jane Jurma (Mon/Tue)"
+      ],
+      "managers": [
+        "Felicia Colantuono (MA Supervisor; also Roswell)"
+      ],
+      "notes": "Main location for Ankur Yadav."
+    },
+    {
+      "name": "Roswell",
+      "address": "12020 Etris Rd Suite B110, Roswell, GA 30075",
+      "county": "Fulton",
+      "providers": [
+        "Dr. Asghar (Wed/Fri AM)",
+        "Nicole O\u2019Connor, NP",
+        "Caroline Hydrick, NP"
+      ],
+      "managers": [
+        "Felicia Colantuono (MA Supervisor; also Sixes)"
+      ],
+      "notes": "Half-day Fridays (subject to change)."
+    },
+    {
+      "name": "Rome (newest)",
+      "address": "415 E 2nd Ave Suite A, Rome, GA 30161",
+      "county": "Floyd",
+      "providers": [
+        "Dr. Cline (varies)",
+        "Stephanie Sisson, NP",
+        "Mallory Fallin, PA"
+      ],
+      "managers": [
+        "Monica Wiggins (MA Supervisor)"
+      ]
+    },
+    {
+      "name": "Woodstock (opening Oct 25)",
+      "address": "242 Creekstone Ridge, Woodstock, GA 30188",
+      "county": "Cherokee",
+      "providers": [
+        "Caroline Hydrick, NP (Tue)",
+        "Dr. Asghar (Fri AM)"
+      ]
+    },
+    {
+      "name": "Hickory Flat (coming soon)",
+      "address": "",
+      "county": "Cherokee",
+      "notes": "Due diligence period as of July 2025"
+    }
+  ]
+}

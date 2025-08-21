@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "title": "Top Golf Staff Outing",
+      "date": "Sat, Sep 20, 2025",
+      "time": "4:00\u20137:00 PM",
+      "location": "Topgolf Alpharetta",
+      "primary_contact": "Eric Ryll (Sales Manager)",
+      "links": [],
+      "details": "Repeat of prior format; contract + 50% deposit required."
+    },
+    {
+      "title": "Annual Flapjack 5K",
+      "date": "Sat, Jun 21, 2025",
+      "location": "Jasper",
+      "primary_contact": "Tiffany Gleason (UCB)",
+      "links": [
+        {
+          "label": "Registration",
+          "href": "https://www.runsignup.com"
+        }
+      ]
+    },
+    {
+      "title": "Marble Festival 5K",
+      "date": "Sat, Oct 4, 2025",
+      "location": "Jasper UMC",
+      "primary_contact": "Juanita Tatum",
+      "links": [
+        {
+          "label": "Jasper UMC",
+          "href": "https://jasperumc.org"
+        }
+      ]
+    },
+    {
+      "title": "Cade Tanner Memorial 5K",
+      "date": "Sat, Sep 13, 2025",
+      "location": "Nathan Dean Park, Rockmart, GA"
+    }
+  ]
+}

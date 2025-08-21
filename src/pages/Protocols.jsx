@@ -1,0 +1,25 @@
+import React from 'react'
+import Card from '../ui/Card.jsx'
+
+export default function Protocols({ data, query }){
+  if(!data) return <div>Loading...</div>
+  const q = (query||'').toLowerCase()
+  const items = data.protocols.items.filter(p => 
+    (p.title + ' ' + p.details).toLowerCase().includes(q)
+  )
+  return (
+    <div className="grid gap-4">
+      {items.map((p,i)=>(
+        <Card key={i} title={p.title}>
+          <div className="space-y-2">
+            <div className="whitespace-pre-wrap">{p.details}</div>
+            {p.links?.length>0 && <ul className="list-disc ml-5">
+              {p.links.map((l,idx)=>(<li key={idx}><a className="underline" href={l.href} target="_blank">{l.label}</a></li>))}
+            </ul>}
+            {p.note && <div className="text-xs text-gray-500">{p.note}</div>}
+          </div>
+        </Card>
+      ))}
+    </div>
+  )
+}

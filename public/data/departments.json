@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "name": "Primary Care",
+      "scope": "Clinical ops and patient services",
+      "meetings": "Per Admin schedule"
+    },
+    {
+      "name": "Pediatrics",
+      "scope": "Pediatric providers & clinics at Jasper/Canton",
+      "meetings": "Per office staff calendars"
+    },
+    {
+      "name": "MedSpa",
+      "scope": "Aesthetics services and marketing",
+      "meetings": "All Spa Staff \u2014 3rd Tuesday monthly"
+    }
+  ]
+}

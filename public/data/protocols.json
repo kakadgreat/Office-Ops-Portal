@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "title": "Facilities, IT & Service Requests",
+      "details": "All staff submit requests via Microsoft Forms. Weekly Word reports to Practice Manager, Ankur Yadav, and Dr. Yadav. Supervisors are copied on auto-acknowledgments.",
+      "links": [
+        {
+          "label": "Submit Request (MS Forms)",
+          "href": "https://forms.office.com/r/RThattgVkJ"
+        }
+      ],
+      "note": "Keep credentials out of public pages. Route sensitive data via MS 365."
+    },
+    {
+      "title": "Printing Locations",
+      "details": "Canton: 3rd floor MA station printer AFPMG105P; 2nd floor check-in desk AFPMG11P. Jasper: coordinate with Trina, Laura, or Leslie for access."
+    },
+    {
+      "title": "Responding to Patient Reviews",
+      "details": "Use PatientPoint to aggregate. Reply publicly to Google reviews only; acknowledge PatientPoint feedback internally. Keep responses cordial, concise, personalized by name.",
+      "links": []
+    },
+    {
+      "title": "Extinguisher & Alarm Inspections",
+      "details": "Canton: Alliance Fire (Inspections + Alarm). Jasper: Cliff\u2019s Fire Extinguishers. Maintain separate schedules per vendor."
+    },
+    {
+      "title": "Room/Space Reservations (Canton Lower Level)",
+      "details": "Use Calendly to reserve lower level space.",
+      "links": [
+        {
+          "label": "Calendly \u2014 Canton Lounge",
+          "href": "https://calendly.com/canton-lounge"
+        }
+      ]
+    }
+  ]
+}
