@@ -4,6 +4,7 @@ export default function Offices({ data, query }){
   if(!data) return <div>Loading...</div>
   const [counties, setCounties] = React.useState(new Set())
   const [names, setNames] = React.useState(new Set())
+  const [showFilters, setShowFilters] = React.useState(false)
   const q = (query||'').toLowerCase()
   const toggle = (set, value) => { const next=new Set(set); next.has(value)?next.delete(value):next.add(value); return next }
   const all = data.offices.locations || []
@@ -15,7 +16,16 @@ export default function Offices({ data, query }){
   if(q) items = items.filter(o => [o.name, o.address, o.county, (o.providers||[]).join(' ')].join(' ').toLowerCase().includes(q))
   const Pill = ({label, active, onClick}) => <button onClick={onClick} className={`pill ${active?'on':'off'}`}>{label}</button>
   return (<div className='space-y-4'>
-    <div className='sticky-top bg-white border rounded-xl p-3 space-y-2'>
+    <div className='sm:hidden'>
+      <button onClick={()=>setShowFilters(s=>!s)} className='border rounded-xl px-3 py-2 w-full text-left'>Filters {showFilters?'▲':'▼'}</button>
+      {showFilters && <div className='mt-2 space-y-2 border rounded-xl p-3'>
+        <div className='text-sm font-semibold'>County</div>
+        <div className='flex flex-wrap gap-2'>{countyList.map(c => <Pill key={c} label={c} active={counties.has(c)} onClick={()=>setCounties(toggle(counties,c))}/>)}</div>
+        <div className='text-sm font-semibold mt-2'>Location</div>
+        <div className='flex flex-wrap gap-2'>{nameList.map(n => <Pill key={n} label={n} active={names.has(n)} onClick={()=>setNames(toggle(names,n))}/>)}</div>
+      </div>}
+    </div>
+    <div className='hidden sm:block sticky-top bg-white border rounded-xl p-3 space-y-2'>
       <div className='text-sm font-semibold'>Filter by County</div>
       <div className='flex flex-wrap gap-2'>{countyList.map(c => <Pill key={c} label={c} active={counties.has(c)} onClick={()=>setCounties(toggle(counties,c))}/>)}</div>
       <div className='text-sm font-semibold mt-2'>Filter by Location</div>

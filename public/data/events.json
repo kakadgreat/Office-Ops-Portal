@@ -1,14 +1,46 @@
 {
   "items": [
     {
-      "title": "Prestige Med Spa \u2014 Events & Specials",
-      "location": "Roswell \u2022 Jasper \u2022 Rome \u2022 Sixes",
-      "links": [
-        {
-          "label": "View current specials & events",
-          "href": "https://www.prestigemedspa.org/resources/events-specials"
-        }
-      ]
+      "title": "Top Golf Staff Outing",
+      "date": "Saturday, September 20, 2025, 4:00\u20137:00 PM",
+      "location": "Topgolf Alpharetta, 10900 Westside Pkwy, Alpharetta, GA 30009",
+      "details": "Staff outing; bays reserved; 50% deposit and agreement on file. Topgolf contact: Eric Ryll (470-299-7018)."
+    },
+    {
+      "title": "Marble Festival 5K",
+      "date": "October 4, 2025",
+      "location": "Jasper, GA",
+      "details": "Organized by Jasper United Methodist Church. Contact: Juanita Tatum."
+    },
+    {
+      "title": "CadeStrong 5K Walk & Wheelchair Roll",
+      "date": "September 13, 2025",
+      "location": "Nathan Dean Park, Rockmart, GA",
+      "details": ""
+    },
+    {
+      "title": "Boating at Little River Marina",
+      "date": "Rescheduled to May 17, 2025",
+      "location": "Little River Marina, Canton, GA",
+      "details": "EVENT WAS CANCELLED; two Aloha 22 Tritoons were reserved; drivers Daniel Dean and Dr. Anil Yadav."
+    },
+    {
+      "title": "Bowling at Stars and Strikes",
+      "date": "July 19 (6\u20138 PM)",
+      "location": "Stars and Strikes (location per invite)",
+      "details": "Annual staff bowling event; RSVP link in guide."
+    },
+    {
+      "title": "Black & White Ball",
+      "date": "Saturday, January 18, 2025 (6\u201311 PM)",
+      "location": "Suite Six Venue, Canton, GA",
+      "details": "Annual winter formal; DJ, dinner, awards; 123 attendees."
+    },
+    {
+      "title": "First Fridays Sponsorship (Canton)",
+      "date": "",
+      "location": "Downtown Canton",
+      "details": "Coordinated by Verlinda Hardy; PMG dates for 2025 listed in guide."
     }
   ]
 }

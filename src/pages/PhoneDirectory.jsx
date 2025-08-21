@@ -17,5 +17,38 @@ export default function PhoneDirectory({ data, query }){
   if(q) items = items.filter(r => [r.name, r.ext, r.location, r.dept].join(' ').toLowerCase().includes(q))
   items = [...items].sort((a,b)=> scoreDept(a.dept)-scoreDept(b.dept) || (a.name||'').localeCompare(b.name||''))
   const Pill = ({label, active, onClick}) => <button onClick={onClick} className={`pill ${active?'on':'off'}`}>{label}</button>
-  return (<div className='space-y-4'><Card title='Filters'><div className='flex flex-wrap gap-2 items-center'><div className='font-semibold mr-2'>Location:</div>{locations.map(v=> <Pill key={v} label={v} active={selLoc.has(v)} onClick={()=>setSelLoc(toggle(selLoc,v))}/>)}</div><div className='flex flex-wrap gap-2 items-center mt-3'><div className='font-semibold mr-2'>Dept:</div>{depts.map(v=> <Pill key={v} label={v} active={selDept.has(v)} onClick={()=>setSelDept(toggle(selDept,v))}/>)}</div></Card><div className='overflow-auto rounded-xl border bg-white table-zebra'><table className='w-full text-sm'><thead className='bg-gray-50 border-b'><tr><th className='px-3 py-2 text-left'>Name</th><th className='px-3 py-2 text-left'>Ext</th><th className='px-3 py-2 text-left'>Location</th><th className='px-3 py-2 text-left'>Dept</th></tr></thead><tbody>{items.map((r,i)=>(<tr key={i} className='border-b last:border-0'><td className='px-3 py-2'>{r.name}</td><td className='px-3 py-2'>{r.ext}</td><td className='px-3 py-2'>{r.location}</td><td className='px-3 py-2'>{r.dept}</td></tr>))}</tbody></table></div><div className='text-xs text-gray-500'>To add/edit directory entries, go to the <a className='underline' href='/phone/edit'>Editor</a>.</div></div>)
+  return (<div className='space-y-4'>
+    <Card title='Filters'>
+      <div className='flex flex-wrap gap-2 items-center'>
+        <div className='font-semibold mr-2'>Location:</div>
+        {locations.map(v=> <Pill key={v} label={v} active={selLoc.has(v)} onClick={()=>setSelLoc(toggle(selLoc,v))}/>)}
+      </div>
+      <div className='flex flex-wrap gap-2 items-center mt-3'>
+        <div className='font-semibold mr-2'>Dept:</div>
+        {depts.map(v=> <Pill key={v} label={v} active={selDept.has(v)} onClick={()=>setSelDept(toggle(selDept,v))}/>)}
+      </div>
+    </Card>
+    <div className='overflow-auto rounded-xl border bg-white table-zebra'>
+      <table className='w-full text-sm'>
+        <thead className='bg-gray-50 border-b'>
+          <tr>
+            <th className='px-3 py-2 text-left'>Name</th>
+            <th className='px-3 py-2 text-left'>Ext</th>
+            <th className='px-3 py-2 text-left'>Location</th>
+            <th className='px-3 py-2 text-left'>Dept</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((r,i)=>(
+            <tr key={i} className='border-b last:border-0'>
+              <td className='px-3 py-2'>{r.name}</td>
+              <td className='px-3 py-2'>{r.ext}</td>
+              <td className='px-3 py-2'>{r.location}</td>
+              <td className='px-3 py-2'>{r.dept}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>)
 }

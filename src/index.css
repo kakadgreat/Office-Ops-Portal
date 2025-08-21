@@ -1,11 +1,21 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Images subtle */
 img{max-height:180px; object-fit:cover}
 .card-img{max-height:140px}
 .hero-img{max-height:220px}
+/* Zebra tables */
 .table-zebra tbody tr:nth-child(odd){ background: #fafafa }
+/* Pills */
 .pill{ padding:0.25rem 0.75rem; border-radius:9999px; border:1px solid #e5e7eb; font-size:0.875rem }
 .pill.on{ background:#e8f8e8; border-color:#86efac }
 .pill.off{ background:white }
-.sticky-top{ position: sticky; top: 64px; z-index: 20; }
+/* Sticky filters (avoid tall header on mobile by making collapsible) */
+.sticky-top{ position: sticky; top: 56px; z-index: 20; }
+/* Mobile tweaks: tighter paddings, collapse sections  */
+@media (max-width: 640px){
+  header .max-w-6xl{ padding-top: 6px; padding-bottom: 6px }
+  .hero-img{ max-height: 150px }
+}
