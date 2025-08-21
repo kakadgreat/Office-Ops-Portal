@@ -1,25 +1,3 @@
 import React from 'react'
 import Card from '../ui/Card.jsx'
-
-export default function Advertising({ data, query }){
-  if(!data) return <div>Loading...</div>
-  const q = (query||'').toLowerCase()
-  const items = data.advertising.channels.filter(a => 
-    (a.name + ' ' + (a.summary||'')).toLowerCase().includes(q)
-  )
-  return (
-    <div className="grid gap-4">
-      {items.map((a,i)=>(
-        <Card key={i} title={a.name}>
-          <div className="space-y-1">
-            {a.summary && <div>{a.summary}</div>}
-            {a.contacts?.length>0 && <div><b>Contacts:</b> {a.contacts.join(', ')}</div>}
-            {a.links?.length>0 && <ul className="list-disc ml-5">
-              {a.links.map((l,idx)=>(<li key={idx}><a className="underline" href={l.href} target="_blank">{l.label}</a></li>))}
-            </ul>}
-          </div>
-        </Card>
-      ))}
-    </div>
-  )
-}
+export default function Advertising({ data, query }){ if(!data) return <div>Loading...</div>; const q=(query||'').toLowerCase(); const items=data.advertising.channels.filter(a=>(a.name+' '+(a.summary||'')).toLowerCase().includes(q)); return (<div className='grid gap-4'>{items.map((a,i)=>(<Card key={i} title={a.name}><div className='space-y-1'>{a.summary&&<div>{a.summary}</div>}{a.contacts?.length>0&&<div><b>Contacts:</b> {a.contacts.join(', ')}</div>}{a.links?.length>0&&<ul className='list-disc ml-5'>{a.links.map((l,idx)=>(<li key={idx}><a className='underline' href={l.href} target='_blank'>{l.label}</a></li>))}</ul>}</div></Card>))}</div>) }
