@@ -1,12 +1,12 @@
 import React from 'react'
-import Card from '../ui/Card.jsx'
+import CollapsibleCard from '../ui/CollapsibleCard.jsx'
 export default function Facilities({ data }){
   if(!data) return <div>Loading...</div>
   const cats=(data.facilities?.categories)||[]
   if(cats.length===0) return <div>No facilities vendors found. Add them in <code>public/data/facilities.json</code>.</div>
   return (<div className='grid md:grid-cols-2 gap-4'>
     {cats.map((c,i)=>(
-      <Card key={i} title={c.category}>
+      <CollapsibleCard key={i} title={c.category} defaultOpen={false}>
         <div className='space-y-2'>
           {c.vendors.map((v,idx)=>(
             <div key={idx} className='border rounded-xl p-2'>
@@ -17,7 +17,7 @@ export default function Facilities({ data }){
             </div>
           ))}
         </div>
-      </Card>
+      </CollapsibleCard>
     ))}
   </div>)
 }

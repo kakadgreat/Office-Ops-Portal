@@ -1,8 +1,10 @@
 import React from 'react'
-import Card from '../ui/Card.jsx'
+import CollapsibleCard from '../ui/CollapsibleCard.jsx'
+
 const DEPT_ORDER=['Providers','MA','Front Desk','Spa']
 const scoreDept=(d)=>{const i=DEPT_ORDER.indexOf(d||''); return i>=0?i:99}
 const sortBy=(col,asc)=>(a,b)=>((''+(a[col]??'')).localeCompare((''+(b[col]??'')),undefined,{numeric:true,sensitivity:'base'}))*(asc?1:-1)
+
 export default function PhoneDirectory({ data, query }){
   if(!data) return <div>Loading...</div>
   const all=data.phone.items||[]
@@ -23,26 +25,20 @@ export default function PhoneDirectory({ data, query }){
   if(sort.col){ items=items.sort(sortBy(sort.col,sort.asc)) }
   const Pill=({label,active,onClick})=> <button onClick={onClick} className={`pill ${active?'on':'off'}`}>{label}</button>
   const header=(label,col)=><th onClick={()=>setSort({col,asc:sort.col===col?!sort.asc:true})} className='px-3 py-2 cursor-pointer text-left select-none'>{label}{sort.col===col?(sort.asc?' ▲':' ▼'):''}</th>
+
   return (<div className='space-y-4'>
-    <div className='grid md:grid-cols-3 gap-4'>
-      <Card title='Filters'>
-        <div className='flex flex-wrap gap-2 items-center'>
-          <div className='font-semibold mr-2'>Location:</div>
-          {locations.map(v=> <Pill key={v} label={v} active={selLoc.has(v)} onClick={()=>setSelLoc(toggle(selLoc,v))}/>)}
-        </div>
-        <div className='flex flex-wrap gap-2 items-center mt-3'>
-          <div className='font-semibold mr-2'>Dept:</div>
-          {depts.map(v=> <Pill key={v} label={v} active={selDept.has(v)} onClick={()=>setSelDept(toggle(selDept,v))}/>)}
-        </div>
-        <div className='mt-3'><input className='border rounded-xl px-3 py-2 w-full' placeholder='Quick search (name, ext, dept, location)' value={localQ} onChange={e=>setLocalQ(e.target.value)} /></div>
-      </Card>
-      <Card title='Schedule & Time Clock'>
-        <div className='space-y-2'><a className='underline' href='https://heartlandhcm.com/login' target='_blank' rel='noreferrer'>Heartland HCM Login</a><div className='text-gray-600 text-sm'>View schedules and clock in/out.</div></div>
-      </Card>
-      <Card title='Directory Editor'>
-        <div className='space-y-2'><div>Need to update the list?</div><a className='underline' href='/phone/edit' target='_blank' rel='noreferrer'>Open the editor</a><div className='text-xs text-gray-500'>Add/remove entries and download the JSON to commit.</div></div>
-      </Card>
-    </div>
+    <CollapsibleCard title='Filters' defaultOpen={true}>
+      <div className='flex flex-wrap gap-2 items-center'>
+        <div className='font-semibold mr-2'>Location:</div>
+        {locations.map(v=> <Pill key={v} label={v} active={selLoc.has(v)} onClick={()=>setSelLoc(toggle(selLoc,v))}/>)}
+      </div>
+      <div className='flex flex-wrap gap-2 items-center mt-3'>
+        <div className='font-semibold mr-2'>Dept:</div>
+        {depts.map(v=> <Pill key={v} label={v} active={selDept.has(v)} onClick={()=>setSelDept(toggle(selDept,v))}/>)}
+      </div>
+      <div className='mt-3'><input className='border rounded-xl px-3 py-2 w-full' placeholder='Quick search (name, ext, dept, location)' value={localQ} onChange={e=>setLocalQ(e.target.value)} /></div>
+    </CollapsibleCard>
+
     <div className='overflow-auto rounded-xl border bg-white table-zebra'>
       <table className='w-full text-sm'>
         <thead className='bg-gray-50 border-b'>
@@ -53,5 +49,9 @@ export default function PhoneDirectory({ data, query }){
         </tbody>
       </table>
     </div>
+
+    <CollapsibleCard title='Directory Editor' defaultOpen={false}>
+      <div className='space-y-2'><div>Need to update the list?</div><a className='underline' href='/phone/edit'>Open the editor</a><div className='text-xs text-gray-500'>Add/remove entries and download the JSON to commit.</div></div>
+    </CollapsibleCard>
   </div>)
 }
