@@ -1,8 +1,29 @@
 {
   "items": [
     {
-      "img": "https://storage.googleapis.com/treatspace-prod-media/pracimg/u-2953/PMG_Peds4.jpeg",
-      "caption": "Pediatric Provider: Anna Alexander, CPNP, CLC"
-    }
+      "img": "/assets/afterhours.jpg",
+      "caption": "Pediatric After Hours Advice Line"
+    },
+
+    { "img": "https://img.youtube.com/vi/6ppaRhfiOjE/hqdefault.jpg", "caption": "Meet Sasha Milks, NP — Patient-Centered Family Medicine" },
+    { "img": "https://img.youtube.com/vi/p7q3JG-MXSc/hqdefault.jpg", "caption": "Meet Caroline Hydrick, FNP — Family Medicine & Preventative Care" },
+    { "img": "https://img.youtube.com/vi/laxFJSQutto/hqdefault.jpg", "caption": "Meet Anna Alexander, CPNP — Pediatric Primary Care & Wellness" },
+    { "img": "https://img.youtube.com/vi/T5KpeHCpvHE/hqdefault.jpg", "caption": "Meet Caroline Garrett, NP — Women’s Health & Family Medicine" },
+    { "img": "https://img.youtube.com/vi/UNr8imD07I4/hqdefault.jpg", "caption": "Meet Stephanie Sisson, FNP — Loved by Patients" },
+    { "img": "https://img.youtube.com/vi/9-937iD_Du0/hqdefault.jpg", "caption": "Meet Leigh Maddox, FNP-C — Comprehensive Family Care" },
+    { "img": "https://img.youtube.com/vi/zz95oOcAAQA/hqdefault.jpg", "caption": "Meet Laura Craig, FNP-C — Patient-Focused Family Medicine (Shorts)" },
+    { "img": "https://img.youtube.com/vi/9qof0zjDexw/hqdefault.jpg", "caption": "Expert Tips: Flu Prevention, Pediatric Care & Skincare (ATL Live)" },
+    { "img": "https://img.youtube.com/vi/G_iWWQOduc4/hqdefault.jpg", "caption": "Prestige Medical Group — Office Tour (HD)" },
+    { "img": "https://img.youtube.com/vi/6dLvWf1k8QM/hqdefault.jpg", "caption": "Office Tour HD 1080p — Services Overview" },
+    { "img": "https://img.youtube.com/vi/bRpEwRCdIMs/hqdefault.jpg", "caption": "Welcome to Prestige Medical Group — Jasper" },
+    { "img": "https://img.youtube.com/vi/690U80Vc6T0/hqdefault.jpg", "caption": "Prestige Pediatrics — Jasper & Canton" },
+    { "img": "https://img.youtube.com/vi/T-9_2wbHIRU/hqdefault.jpg", "caption": "New Jasper Pediatric Office — Walkthrough" },
+    { "img": "https://img.youtube.com/vi/AD9WIC9visE/hqdefault.jpg", "caption": "MedSpa: September–October Specials" },
+    { "img": "https://img.youtube.com/vi/Tz8abjtqzts/hqdefault.jpg", "caption": "Caitlyn Smith, NP — MedSpa Injectables" },
+    { "img": "https://img.youtube.com/vi/6nPDvhyFIfc/hqdefault.jpg", "caption": "Prestige Medical Group — MedSpa (HD)" },
+    { "img": "https://img.youtube.com/vi/wxJqWPBOiMA/hqdefault.jpg", "caption": "Prestige Medical Group — Spa Overview" },
+    { "img": "https://img.youtube.com/vi/LDJA7-1_zl8/hqdefault.jpg", "caption": "Meet Dr. Nasir Asghar — Provider Spotlight" },
+    { "img": "https://img.youtube.com/vi/glmEenwDtN4/hqdefault.jpg", "caption": "IV Therapy at Prestige Medical Group" },
+    { "img": "https://img.youtube.com/vi/3fGacqPKHBw/hqdefault.jpg", "caption": "Prestige Waiting Room — Office Info" }
   ]
 }
