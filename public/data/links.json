@@ -5,8 +5,21 @@
     "peds": "https://www.prestigepediatrics.org"
   },
   "social": {
-    "primary": [],
-    "spa": [],
-    "peds": []
+    "primary": [
+      "https://www.instagram.com/pmg_ga",
+      "https://www.youtube.com/@PrestigeMedGroup",
+      "https://x.com/pmg_ga",
+      "https://www.facebook.com/prestigemedicalgroup"
+    ],
+    "spa": [
+      "https://www.youtube.com/@PrestigeMedSpas",
+      "https://www.tiktok.com/@prestigemedspakim",
+      "https://www.instagram.com/prestigemedspas/?hl=en",
+      "https://www.facebook.com/prestigemedspas"
+    ],
+    "peds": [
+      "https://www.facebook.com/prestigepediatrics",
+      "https://www.instagram.com/prestigepediatrics/"
+    ]
   }
 }
