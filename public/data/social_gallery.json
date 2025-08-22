@@ -1,29 +1,104 @@
 {
   "items": [
     {
-      "img": "/assets/afterhours.jpg",
-      "caption": "Pediatric After Hours Advice Line"
+      "img": "https://img.youtube.com/vi/6ppaRhfiOjE/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=6ppaRhfiOjE",
+      "caption": "Meet Sasha Milks, NP"
     },
-
-    { "img": "https://img.youtube.com/vi/6ppaRhfiOjE/hqdefault.jpg", "caption": "Meet Sasha Milks, NP — Patient-Centered Family Medicine" },
-    { "img": "https://img.youtube.com/vi/p7q3JG-MXSc/hqdefault.jpg", "caption": "Meet Caroline Hydrick, FNP — Family Medicine & Preventative Care" },
-    { "img": "https://img.youtube.com/vi/laxFJSQutto/hqdefault.jpg", "caption": "Meet Anna Alexander, CPNP — Pediatric Primary Care & Wellness" },
-    { "img": "https://img.youtube.com/vi/T5KpeHCpvHE/hqdefault.jpg", "caption": "Meet Caroline Garrett, NP — Women’s Health & Family Medicine" },
-    { "img": "https://img.youtube.com/vi/UNr8imD07I4/hqdefault.jpg", "caption": "Meet Stephanie Sisson, FNP — Loved by Patients" },
-    { "img": "https://img.youtube.com/vi/9-937iD_Du0/hqdefault.jpg", "caption": "Meet Leigh Maddox, FNP-C — Comprehensive Family Care" },
-    { "img": "https://img.youtube.com/vi/zz95oOcAAQA/hqdefault.jpg", "caption": "Meet Laura Craig, FNP-C — Patient-Focused Family Medicine (Shorts)" },
-    { "img": "https://img.youtube.com/vi/9qof0zjDexw/hqdefault.jpg", "caption": "Expert Tips: Flu Prevention, Pediatric Care & Skincare (ATL Live)" },
-    { "img": "https://img.youtube.com/vi/G_iWWQOduc4/hqdefault.jpg", "caption": "Prestige Medical Group — Office Tour (HD)" },
-    { "img": "https://img.youtube.com/vi/6dLvWf1k8QM/hqdefault.jpg", "caption": "Office Tour HD 1080p — Services Overview" },
-    { "img": "https://img.youtube.com/vi/bRpEwRCdIMs/hqdefault.jpg", "caption": "Welcome to Prestige Medical Group — Jasper" },
-    { "img": "https://img.youtube.com/vi/690U80Vc6T0/hqdefault.jpg", "caption": "Prestige Pediatrics — Jasper & Canton" },
-    { "img": "https://img.youtube.com/vi/T-9_2wbHIRU/hqdefault.jpg", "caption": "New Jasper Pediatric Office — Walkthrough" },
-    { "img": "https://img.youtube.com/vi/AD9WIC9visE/hqdefault.jpg", "caption": "MedSpa: September–October Specials" },
-    { "img": "https://img.youtube.com/vi/Tz8abjtqzts/hqdefault.jpg", "caption": "Caitlyn Smith, NP — MedSpa Injectables" },
-    { "img": "https://img.youtube.com/vi/6nPDvhyFIfc/hqdefault.jpg", "caption": "Prestige Medical Group — MedSpa (HD)" },
-    { "img": "https://img.youtube.com/vi/wxJqWPBOiMA/hqdefault.jpg", "caption": "Prestige Medical Group — Spa Overview" },
-    { "img": "https://img.youtube.com/vi/LDJA7-1_zl8/hqdefault.jpg", "caption": "Meet Dr. Nasir Asghar — Provider Spotlight" },
-    { "img": "https://img.youtube.com/vi/glmEenwDtN4/hqdefault.jpg", "caption": "IV Therapy at Prestige Medical Group" },
-    { "img": "https://img.youtube.com/vi/3fGacqPKHBw/hqdefault.jpg", "caption": "Prestige Waiting Room — Office Info" }
+    {
+      "img": "https://img.youtube.com/vi/UNr8imD07I4/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=UNr8imD07I4",
+      "caption": "Meet Stephanie Sisson, FNP"
+    },
+    {
+      "img": "https://img.youtube.com/vi/9qof0zjDexw/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=9qof0zjDexw",
+      "caption": "ATL Live: Flu, Pediatrics & Skincare"
+    },
+    {
+      "img": "https://img.youtube.com/vi/G_iWWQOduc4/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=G_iWWQOduc4",
+      "caption": "PMG Office Tour (HD)"
+    },
+    {
+      "img": "https://img.youtube.com/vi/6dLvWf1k8QM/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=6dLvWf1k8QM",
+      "caption": "Office Tour 1080p"
+    },
+    {
+      "img": "https://img.youtube.com/vi/bRpEwRCdIMs/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=bRpEwRCdIMs",
+      "caption": "Welcome to PMG \u2013 Jasper"
+    },
+    {
+      "img": "https://img.youtube.com/vi/Fx7azBqblHA/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=Fx7azBqblHA",
+      "caption": "Welcome \u2013 Roswell, GA"
+    },
+    {
+      "img": "https://img.youtube.com/vi/A_NWLHLcLQY/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=A_NWLHLcLQY",
+      "caption": "Explore \u2013 Rome, GA"
+    },
+    {
+      "img": "https://img.youtube.com/vi/d4BznMRy8-M/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=d4BznMRy8-M",
+      "caption": "Tour \u2013 Canton Office"
+    },
+    {
+      "img": "https://img.youtube.com/vi/DxItU7CPZXg/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=DxItU7CPZXg",
+      "caption": "Meet Dr. Jane Jurma (Peds)"
+    },
+    {
+      "img": "https://img.youtube.com/vi/690U80Vc6T0/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=690U80Vc6T0",
+      "caption": "Prestige Pediatrics \u2013 Jasper & Canton"
+    },
+    {
+      "img": "https://img.youtube.com/vi/3fGacqPKHBw/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=3fGacqPKHBw",
+      "caption": "Waiting Room Info"
+    },
+    {
+      "img": "https://img.youtube.com/vi/AD9WIC9visE/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=AD9WIC9visE",
+      "caption": "MedSpa: Sept\u2013Oct Specials"
+    },
+    {
+      "img": "https://img.youtube.com/vi/Tz8abjtqzts/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=Tz8abjtqzts",
+      "caption": "Caitlyn Smith \u2014 Injectables"
+    },
+    {
+      "img": "https://img.youtube.com/vi/HDh_kqPt3is/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=HDh_kqPt3is",
+      "caption": "MedSpa: Cosmetic Injectables"
+    },
+    {
+      "img": "https://img.youtube.com/vi/YMiccyYCNKU/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=YMiccyYCNKU",
+      "caption": "Botox: Smile Bright"
+    },
+    {
+      "img": "https://img.youtube.com/vi/Qwi0q2wtRrk/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=Qwi0q2wtRrk",
+      "caption": "Microneedling with PRP"
+    },
+    {
+      "img": "https://img.youtube.com/vi/KsTat5aUmEg/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=KsTat5aUmEg",
+      "caption": "Lip Filler with Lottie"
+    },
+    {
+      "img": "https://img.youtube.com/vi/FNBRvrMJr10/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=FNBRvrMJr10",
+      "caption": "Botox Touch-up & Lip Flip"
+    },
+    {
+      "img": "https://img.youtube.com/vi/g8ikQH3PpQA/hqdefault.jpg",
+      "href": "https://www.youtube.com/watch?v=g8ikQH3PpQA",
+      "caption": "Skin Rejuvenation Tips"
+    }
   ]
 }
