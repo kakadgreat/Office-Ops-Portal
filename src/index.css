@@ -1,9 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.table-zebra tbody tr:nth-child(odd){ background: #fafafa }
-.pill{ padding:0.25rem 0.75rem; border-radius:9999px; border:1px solid #e5e7eb; font-size:0.875rem }
+.banner{ background:#fff7ed; border-bottom:1px solid #fde68a }
+.table-zebra tbody tr:nth-child(odd){ background:#fafafa }
+.pill{ padding:0.25rem .75rem; border-radius:9999px; border:1px solid #e5e7eb; font-size:.875rem }
 .pill.on{ background:#e8f8e8; border-color:#86efac }
 .pill.off{ background:white }
-.sticky-top{ position: sticky; top: 56px; z-index: 20; }
-@media (max-width: 640px){ header .max-w-6xl{ padding-top: 6px; padding-bottom: 6px } }
+.sticky-top{ position:sticky; top:56px; z-index:20 }
+@media print{
+  @page{ size:Letter; margin:.5in }
+  header, nav, .banner, footer, .no-print{ display:none!important }
+  main{ padding:0 }
+  table{ page-break-inside:auto }
+  tr{ page-break-inside:avoid; page-break-after:auto }
+  thead{ display:table-header-group }
+  tfoot{ display:table-footer-group }
+}
+@media (max-width:640px){
+  header .max-w-6xl{ padding-top:6px; padding-bottom:6px }
+}

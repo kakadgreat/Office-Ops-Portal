@@ -14,7 +14,7 @@
     },
     {
       "name": "Jasper MedSpa",
-      "url": "https://www.prestigemedspa.org/location/jasper",
+      "url": "https://www.prestigemedspa.org",
       "address": "51 Gordon Rd, Jasper, GA 30143",
       "county": "Pickens"
     },
@@ -26,13 +26,13 @@
     },
     {
       "name": "Prestige Pediatrics in Canton",
-      "url": "https://www.prestigemedicalgroup.org/location/prestige-pediatrics-in-canton",
+      "url": "https://www.prestigepediatrics.org",
       "address": "3755 Sixes Rd, Suite 101, Canton, GA 30114",
       "county": "Cherokee"
     },
     {
       "name": "Canton MedSpa (Sixes)",
-      "url": "https://www.prestigemedspa.org/location/canton",
+      "url": "https://www.prestigemedspa.org",
       "address": "3755 Sixes Rd, Suite 303, Canton, GA 30114",
       "county": "Cherokee"
     },
@@ -44,7 +44,7 @@
     },
     {
       "name": "Roswell MedSpa",
-      "url": "https://www.prestigemedspa.org/location/roswell",
+      "url": "https://www.prestigemedspa.org",
       "address": "12020 Etris Rd, Suite B110-B, Roswell, GA 30075",
       "county": "Fulton"
     },
@@ -56,7 +56,7 @@
     },
     {
       "name": "Rome MedSpa",
-      "url": "https://www.prestigemedspa.org/location/rome",
+      "url": "https://www.prestigemedspa.org",
       "address": "415 E 2nd Ave, Suite A, Rome, GA 30161",
       "county": "Floyd"
     }
