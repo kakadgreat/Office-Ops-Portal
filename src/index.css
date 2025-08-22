@@ -27,3 +27,6 @@ html,body{margin:0;background:#f7f7f7;font-family:ui-sans-serif,system-ui,Segoe 
 html, body { max-width: 100%; overflow-x: hidden; }
 .wrap-link { word-break: break-word; overflow-wrap: anywhere; }
 .table-zebra tbody tr:nth-child(odd){ background:#fafafa }
+
+html, body { max-width:100%; overflow-x:hidden; }
+.wrap-link { word-break: break-word; overflow-wrap:anywhere; }
