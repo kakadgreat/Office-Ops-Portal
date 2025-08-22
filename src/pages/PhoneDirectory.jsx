@@ -5,7 +5,7 @@ const scoreDept=(d)=>{const i=DEPT_ORDER.indexOf(d||''); return i>=0?i:99}
 const sortBy=(col,asc)=>(a,b)=>((''+(a[col]??'')).localeCompare((''+(b[col]??'')),undefined,{numeric:true,sensitivity:'base'}))*(asc?1:-1)
 export default function PhoneDirectory({ data, query }){
   if(!data) return <div>Loading...</div>
-  const all=data?.phone?.items||[]
+  const all=data.phone.items||[]
   const [selLoc,setSelLoc]=React.useState(new Set())
   const [selDept,setSelDept]=React.useState(new Set())
   const [sort,setSort]=React.useState({col:null,asc:true})
@@ -40,7 +40,7 @@ export default function PhoneDirectory({ data, query }){
         <div className='space-y-2'><a className='underline' href='https://heartlandhcm.com/login' target='_blank' rel='noreferrer'>Heartland HCM Login</a><div className='text-gray-600 text-sm'>View schedules and clock in/out.</div></div>
       </Card>
       <Card title='Directory Editor'>
-        <div className='space-y-2'><div>Need to update the list?</div><a className='underline' href='/phone/edit'>Open the editor</a><div className='text-xs text-gray-500'>Add/remove entries and download the JSON to commit.</div></div>
+        <div className='space-y-2'><div>Need to update the list?</div><a className='underline' href='/phone/edit' target='_blank' rel='noreferrer'>Open the editor</a><div className='text-xs text-gray-500'>Add/remove entries and download the JSON to commit.</div></div>
       </Card>
     </div>
     <div className='overflow-auto rounded-xl border bg-white table-zebra'>
@@ -48,7 +48,9 @@ export default function PhoneDirectory({ data, query }){
         <thead className='bg-gray-50 border-b'>
           <tr>{header('Name','name')}{header('Ext','ext')}{header('Location','location')}{header('Dept','dept')}</tr>
         </thead>
-        <tbody>{items.map((r,i)=>(<tr key={i} className='border-b last:border-0'><td className='px-3 py-2'>{r.name}</td><td className='px-3 py-2'>{r.ext}</td><td className='px-3 py-2'>{r.location}</td><td className='px-3 py-2'>{r.dept}</td></tr>))}</tbody>
+        <tbody>
+          {items.map((r,i)=>(<tr key={i} className='border-b last:border-0'><td className='px-3 py-2'>{r.name}</td><td className='px-3 py-2'>{r.ext}</td><td className='px-3 py-2'>{r.location}</td><td className='px-3 py-2'>{r.dept}</td></tr>))}
+        </tbody>
       </table>
     </div>
   </div>)

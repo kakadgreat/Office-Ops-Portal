@@ -7,14 +7,16 @@ import PhoneDirectory from './pages/PhoneDirectory.jsx'
 import PhoneDirectoryEdit from './pages/PhoneDirectoryEdit.jsx'
 import { Search } from 'lucide-react'
 import Banner from './ui/Banner.jsx'
+
 const NavItem=({to,label})=>(<NavLink to={to} className={({isActive})=>`px-3 py-2 rounded-xl hover:bg-gray-100 ${isActive?'bg-gray-200':''}`}>{label}</NavLink>)
+
 export default function App(){
   const [query,setQuery]=React.useState('')
   const [data,setData]=React.useState(null)
   React.useEffect(()=>{(async()=>{
-    const paths=['/data/offices.json','/data/phone.json','/data/facilities.json']
+    const paths=['/data/offices.json','/data/phone.json','/data/facilities.json','/data/events.json','/data/links.json']
     const all=await Promise.all(paths.map(p=>fetch(p).then(r=>r.json().catch(()=>({})))))
-    setData({offices:all[0], phone:all[1], facilities:all[2]})
+    setData({offices:all[0], phone:all[1], facilities:all[2], events:all[3], ll:all[4]})
   })()},[])
   return (<div className='min-h-screen'>
     <Banner/>
@@ -35,7 +37,7 @@ export default function App(){
     </header>
     <main className='max-w-6xl mx-auto px-4 py-4 sm:py-6'>
       <Routes>
-        <Route index element={<Dashboard links={{primary:'https://www.prestigemedicalgroup.org', spa:'https://www.prestigemedspa.org', peds:'https://www.prestigepediatrics.org'}}/>}/>
+        <Route index element={<Dashboard data={data}/>}/>
         <Route path='/offices' element={<Offices data={data} query={query}/>}/>
         <Route path='/facilities' element={<Facilities data={data}/>}/>
         <Route path='/phone' element={<PhoneDirectory data={data} query={query}/>}/>
