@@ -24,6 +24,12 @@
       "location": "Pediatrics Jasper",
       "dept": "Providers"
     },
+      {
+      "name": "Dr. Jane Jurma",
+      "ext": "1004",
+      "location": "Pediatrics Canton",
+      "dept": "Providers"
+    },
     {
       "name": "Dr. Lee Cline",
       "ext": "1005",
