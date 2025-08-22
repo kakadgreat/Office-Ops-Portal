@@ -1,26 +1,6 @@
 import React from 'react'
 
-const SocialGallery = () => {
-  const [items, setItems] = React.useState([]);
-  const trackRef = React.useRef(null);
-  const pos = React.useRef(0);
-
-  React.useEffect(() => {
-    fetch('/data/social_gallery.json')
-      .then(r => r.json())
-      .then(j => setItems(j.items || []));
-  }, []);
-
-  React.useEffect(() => {
-    let raf;
-    const step = () => {
-      pos.current = (pos.current + 0.25) % (items.length * 212); // 200 width + 12 gap
-      if (trackRef.current) {
-        trackRef.current.style.transform = `translateX(-${pos.current}px)`;
-      }
-      raf = requestAnimationFrame(step);
-    };
-    if (items.length > 0) raf = requestAnimationFrame(step);
+if (items.length > 0) raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, [items.length]);
 
@@ -35,6 +15,51 @@ const SocialGallery = () => {
             <a key={i} href={it.href || '#'} target='_blank' rel='noreferrer' style={{ display:'inline-block', width:200 }} title={it.caption || 'Open video'}>
               <img src={it.img} alt={it.caption || 'post'} style={{ height:160, width:200, objectFit:'cover', borderRadius:10, border:'1px solid #ddd' }}/>
               {it.caption && <div className='text-xs text-gray-600 mt-1' style={{ whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{it.caption}</div>}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+const SocialGallery = () => {
+  const [items, setItems] = React.useState([]);
+  const trackRef = React.useRef(null);
+  const pos = React.useRef(0);
+
+  React.useEffect(() => {
+    fetch('/data/social_gallery.json').then(r=>r.json()).then(j=> setItems(j.items||[]));
+  }, []);
+
+  React.useEffect(() => {
+    let raf;
+    const step = () => {
+      // 206px = 196 content + 10 gap
+      pos.current = (pos.current + 0.25) % (items.length * 206);
+      if (trackRef.current) trackRef.current.style.transform = `translateX(-${pos.current}px)`;
+      raf = requestAnimationFrame(step);
+    };
+    if (items.length > 0) raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [items.length]);
+
+  const loop = items.concat(items);
+
+  return (
+    <div className='space-y-2'>
+      <div className='text-sm font-semibold'>Social Gallery</div>
+      <div className='relative overflow-hidden border rounded-2xl bg-white' style={{ height: 180 }}>
+        <div
+          ref={trackRef}
+          className='absolute left-0 top-0 h-full will-change-transform'
+          style={{ display:'flex', alignItems:'center', gap:10, padding:8 }}
+        >
+          {loop.map((it,i)=> (
+            <a key={i} href={it.href||'#'} target='_blank' rel='noreferrer' style={{ display:'inline-block', width:196 }} title={it.caption||'Open video'}>
+              <img src={it.img} alt={it.caption||'post'} style={{ height:160, width:196, objectFit:'cover', borderRadius:10, border:'1px solid #ddd' }}/>
+              {!!it.caption && <div className='text-xs text-gray-600 mt-1' style={{ whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{it.caption}</div>}
             </a>
           ))}
         </div>
@@ -100,5 +125,6 @@ export default function Dashboard(){
         </span>))}
       </div>
     </div>
+    <SocialGallery/>
   </div>)
 }
