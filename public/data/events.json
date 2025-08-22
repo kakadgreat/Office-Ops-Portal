@@ -1,16 +1,34 @@
 {
   "items": [
     {
-      "title": "Top Golf Staff Outing",
-      "date": "Saturday, September 20, 2025, 4\u20137 PM",
-      "location": "Topgolf Alpharetta",
-      "details": "Bays reserved; Eric Ryll (470-299-7018)."
+      "title": "Marble Festival 5K",
+      "date": "October 4, 2025",
+      "location": "Jasper, GA",
+      "details": "Organized by Jasper UMC; contacts in guide."
+    },
+    {
+      "title": "CadeStrong 5K Walk & Roll",
+      "date": "September 13, 2025",
+      "location": "Rockmart, GA",
+      "details": "Nathan Dean Park"
+    },
+    {
+      "title": "Bowling at Stars and Strikes",
+      "date": "July 19, 2025 \u2022 6\u20138 PM",
+      "location": "Canton, GA",
+      "details": "Company bowling night; RSVP link in guide."
     },
     {
       "title": "Black & White Ball",
-      "date": "Saturday, January 18, 2025 (6\u201311 PM)",
-      "location": "Canton, GA",
-      "details": "Winter formal; DJ, dinner, awards."
+      "date": "Saturday, January 18, 2025, from 6:00 PM to 11:00 PM",
+      "location": "Suite Six Venue, 147 Reinhardt College Parkway, Suite 6, Canton, GA 30114",
+      "details": "Annual winter formal; DJ, dinner, awards, dancing."
+    },
+    {
+      "title": "First Fridays (Downtown Canton)",
+      "date": "Summer/Fall 2025",
+      "location": "Downtown Canton, GA",
+      "details": "Rotating service tables (Peds/MedSpa/Primary)."
     }
   ]
 }
