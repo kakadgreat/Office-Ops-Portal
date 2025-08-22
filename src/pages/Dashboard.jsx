@@ -13,8 +13,9 @@ export default function Dashboard(){
     <div style={{fontWeight:600,marginBottom:6}}>{title}</div>
     <div style={{marginBottom:8}}><a href={site} target='_blank' rel='noreferrer'>Open {title}</a></div>
     <table className='table-zebra' style={{width:'100%',fontSize:14}}><thead><tr><th>Platform</th><th>URL</th></tr></thead><tbody>
-      {arr.map((u,i)=>(<tr key={i}><td>{u.includes('instagram')?'Instagram':u.includes('tiktok')?'TikTok':u.includes('youtube')?'YouTube':u.includes('facebook')?'Facebook':u.includes('x.com')?'X':'Link'}</td><td style={{wordBreak:'break-word'}}><a href={u} target='_blank' rel='noreferrer'>{u}</a></td></tr>))}
+      {(arr&&arr.length?arr:[]).map((u,i)=>(<tr key={i}><td>{u.includes('instagram')?'Instagram':u.includes('tiktok')?'TikTok':u.includes('youtube')?'YouTube':u.includes('facebook')?'Facebook':u.includes('x.com')?'X':'Link'}</td><td style={{wordBreak:'break-word'}}><a href={u} target='_blank' rel='noreferrer'>{u}</a></td></tr>))}
     </tbody></table>
+{(!arr||arr.length===0)&&<div style={{fontSize:12,color:'#666',marginTop:6}}>No social links configured.</div>}
   </div>)
   return (<div style={{display:'grid',gap:16}}>
     <div style={{display:'grid',gap:16,gridTemplateColumns:'repeat(4,1fr)'}}>
@@ -49,7 +50,7 @@ export default function Dashboard(){
     <div>
       <div style={{fontWeight:600,marginBottom:6}}>Social Gallery</div>
       <div ref={scroller} style={{overflowX:'auto',whiteSpace:'nowrap',background:'#fff',border:'1px solid #eee',borderRadius:12,padding:8}}>
-        {(gallery||[]).map((it,i)=>(<span key={i} style={{display:'inline-block',marginRight:12}}>
+        {((gallery&&gallery.length)?gallery:[]).map((it,i)=>(<span key={i} style={{display:'inline-block',marginRight:12}}>
           <img src={it.img} alt={it.caption||'post'} style={{height:160,borderRadius:10,border:'1px solid #ddd'}}/>
           <div style={{fontSize:12,color:'#666',maxWidth:190,overflow:'hidden',textOverflow:'ellipsis'}}>{it.caption}</div>
         </span>))}
