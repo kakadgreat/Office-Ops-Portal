@@ -29,7 +29,7 @@ export default function Dashboard({ data }){
           {urls.map((u,i)=>(
             <tr key={i} className='border-b last:border-0'>
               <td className='px-3 py-2'>{labelFromUrl(u)}</td>
-              <td className='px-3 py-2 wrap-link'><a className='underline break-words' href={u} {...target}>{u}</a></td>
+              <td className='px-3 py-2 wrap-link url-small'><a className='underline' href={u} {...target}>{u}</a></td>
             </tr>
           ))}
         </tbody>

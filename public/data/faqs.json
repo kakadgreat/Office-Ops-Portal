@@ -1,1 +1,55 @@
-{"items": []}
+{
+  "items": [
+    {
+      "id": "new-phone-authenticator",
+      "title": "New phone? Reset Microsoft Authenticator the right way",
+      "tags": [
+        "Inacomp",
+        "Authenticator",
+        "Password",
+        "Microsoft",
+        "Onboarding"
+      ],
+      "steps": [
+        "Call Inacomp immediately at 770-255-1022.",
+        "Tell them you need your Microsoft Authenticator app reset.",
+        "Wait for them to complete the reset \u2014 they will walk you through it.",
+        "Do not attempt to reset, reinstall, or reconfigure Authenticator on your own.",
+        "Once reset, follow Inacomp\u2019s instructions to set up the app on the new phone."
+      ],
+      "note": "\u26a0\ufe0f This is the only supported method. Other attempts can cause account lockouts."
+    },
+    {
+      "id": "send-fax-nextiva-vfax",
+      "title": "Sending faxes with Nextiva vFAX",
+      "tags": [
+        "Fax",
+        "Nextiva",
+        "vFAX",
+        "Portal"
+      ],
+      "links": [
+        {
+          "label": "vFAX Portal",
+          "url": "https://vfax.nextiva.com/xauth/"
+        },
+        {
+          "label": "Nextiva vFAX Help",
+          "url": "https://www.nextiva.com/support/categories/vfax-articles"
+        }
+      ],
+      "steps": [
+        "Log in to the vFAX Portal and enter your credentials.",
+        "Click **Send A Fax** from the dashboard.",
+        "Fill out: **Fax Number** (required), **Deliver To**, **Sent From**, **Fax Subject**, and **Notes**.",
+        "Optionally include a cover page or schedule a send time.",
+        "If using your own cover page, remove the default cover page and attach yours first.",
+        "Click **Next** and upload up to 10 files; files send in the order added.",
+        "Click **Next** to preview; the preview may show template placeholders \u2014 this is normal.",
+        "Choose fax **Type** and **Folder**, optionally add a memo, and add up to five additional recipients.",
+        "Click **Send** to finish.",
+        "Notes: A fax cannot be canceled once sent; typical send speed is 1\u20133 minutes per page."
+      ]
+    }
+  ]
+}

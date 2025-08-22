@@ -1,1 +1,25 @@
-{"categories": []}
+{
+  "categories": [
+    {
+      "category": "HVAC",
+      "vendors": [
+        {
+          "name": "Acme HVAC",
+          "phone": "(770) 555-1234",
+          "email": "support@acmehvac.com",
+          "notes": "Quarterly service"
+        }
+      ]
+    },
+    {
+      "category": "Plumbing",
+      "vendors": [
+        {
+          "name": "FlowRight Plumbing",
+          "phone": "(770) 555-2222",
+          "email": "hello@flowright.com"
+        }
+      ]
+    }
+  ]
+}

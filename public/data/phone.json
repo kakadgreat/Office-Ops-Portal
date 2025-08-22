@@ -1,1 +1,22 @@
-{"items": []}
+{
+  "items": [
+    {
+      "name": "Dr. Smith",
+      "ext": "1001",
+      "location": "Jasper",
+      "dept": "Providers"
+    },
+    {
+      "name": "Alex Johnson",
+      "ext": "204",
+      "location": "Jasper",
+      "dept": "Front Desk"
+    },
+    {
+      "name": "Jamie Lee",
+      "ext": "305",
+      "location": "Jasper",
+      "dept": "MA"
+    }
+  ]
+}

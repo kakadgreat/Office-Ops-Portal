@@ -1,1 +1,22 @@
-{"locations": []}
+{
+  "locations": [
+    {
+      "name": "Jasper Primary Care",
+      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group-9",
+      "address": "51 Gordon Rd, Jasper, GA 30143",
+      "service": "Primary Care"
+    },
+    {
+      "name": "Prestige Pediatrics in Jasper",
+      "url": "https://www.prestigepediatrics.org",
+      "address": "53 Gordon Rd, Suite 101, Jasper, GA 30143",
+      "service": "Pediatrics"
+    },
+    {
+      "name": "Jasper MedSpa",
+      "url": "https://www.prestigemedspa.org",
+      "address": "51 Gordon Rd, Jasper, GA 30143",
+      "service": "MedSpa"
+    }
+  ]
+}
