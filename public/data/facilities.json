@@ -5,21 +5,11 @@
       "vendors": [
         {
           "name": "Devin Wilson (Plaza POC)",
-          "phone": "910-262-7583",
-          "notes": "Roswell plaza point of contact"
+          "phone": "910-262-7583"
         },
         {
           "name": "Flying Locksmiths (Sue Allen)",
           "phone": "678-462-9024"
-        },
-        {
-          "name": "GHS Inc HVAC (Onel Robaina)",
-          "phone": "404-509-9824"
-        },
-        {
-          "name": "The Heating and Air Company (Sam Colon)",
-          "phone": "678-500-6925",
-          "email": "theheatingandaircompanyllc@gmail.com"
         }
       ]
     },
@@ -28,8 +18,7 @@
       "vendors": [
         {
           "name": "Dr. Vargo (Building)",
-          "phone": "706-290-0011",
-          "notes": "Property concerns"
+          "phone": "706-290-0011"
         }
       ]
     },
@@ -39,20 +28,6 @@
         {
           "name": "Controlled Climate Services (HVAC)",
           "phone": "770-432-3869"
-        },
-        {
-          "name": "Chris Amos (Plumber)",
-          "phone": "770-845-4664",
-          "notes": "Text only; 3\u20134 day response"
-        },
-        {
-          "name": "Geek Squad (Basement Washer/Dryer)",
-          "notes": "Under warranty; Account: Dr. Anil Yadav; 770-500-8873"
-        },
-        {
-          "name": "Korey Henkle (Contractor)",
-          "phone": "770-899-8902",
-          "email": "khenkle@advancedsystemsatlanta.com"
         }
       ]
     },
@@ -61,16 +36,7 @@
       "vendors": [
         {
           "name": "Sonny Galloway (GCCI Buildings)",
-          "phone": "770-296-0816",
-          "email": "sonny@gccibuildings.com"
-        },
-        {
-          "name": "Northwest Exterminating (Pest Control)",
-          "phone": "678-383-1030"
-        },
-        {
-          "name": "Denson Heating and Air (HVAC)",
-          "phone": "706-704-1900"
+          "phone": "770-296-0816"
         }
       ]
     },
@@ -79,18 +45,11 @@
       "vendors": [
         {
           "name": "Alliance Fire \u2014 Inspections (Canton)",
-          "phone": "678-680-5742",
-          "email": "HMichno@alliancefire.com",
-          "notes": "Heather Michno, Inspections Coordinator"
+          "phone": "678-680-5742"
         },
         {
           "name": "Alliance Fire \u2014 Alarm (Canton)",
-          "phone": "770-554-5004",
-          "notes": "Tori Taylor, Fire Alarm Coordinator"
-        },
-        {
-          "name": "Cliff\u2019s Fire Extinguisher Co. (Jasper)",
-          "notes": "311 Bell Park Dr, Woodstock, GA 30188"
+          "phone": "770-554-5004"
         }
       ]
     }

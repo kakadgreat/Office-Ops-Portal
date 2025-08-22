@@ -18,7 +18,7 @@
         "Do not attempt to reset, reinstall, or reconfigure Authenticator on your own.",
         "Once reset, follow Inacomp\u2019s instructions to set up the app on the new phone."
       ],
-      "note": "\u26a0\ufe0f This is the only supported method. Other attempts can cause account lockouts."
+      "note": "This is the only supported method. Other attempts can cause account lockouts."
     },
     {
       "id": "send-fax-nextiva-vfax",
@@ -42,14 +42,14 @@
       ],
       "steps": [
         "Log in to the vFAX Portal and enter your credentials.",
-        "Click **Send A Fax** from the dashboard.",
-        "Fill out: **Fax Number** (required), **Deliver To**, **Sent From**, **Fax Subject**, and **Notes**.",
+        "Click Send A Fax from the dashboard.",
+        "Fill out: Fax Number (required), Deliver To, Sent From, Fax Subject, and Notes.",
         "Optionally include a cover page or schedule a send time.",
         "If using your own cover page, remove the default cover page and attach yours first.",
-        "Click **Next** and upload up to 10 files; files send in the order added.",
-        "Click **Next** to preview; the preview may show template placeholders \u2014 this is normal.",
-        "Choose fax **Type** and **Folder**, optionally add a memo, and add up to five additional recipients.",
-        "Click **Send** to finish.",
+        "Click Next and upload up to 10 files; files send in the order added.",
+        "Click Next to preview; the preview may show template placeholders \u2014 this is normal.",
+        "Choose fax Type and Folder, optionally add a memo, and add up to five additional recipients.",
+        "Click Send to finish.",
         "Notes: A fax cannot be canceled once sent; typical send speed is 1\u20133 minutes per page."
       ]
     },
@@ -63,8 +63,29 @@
         "Outlook",
         "Setup"
       ],
-      "steps": [],
-      "note": "Only change your **Name** and **Title**. Do not add other links or information. Call Ankur if you have questions: 770-608-8199."
+      "steps": [
+        "Open your email, and click on the Gear symbol on top right corner.",
+        "Click Account",
+        "Click Signature",
+        "Click: +New signature",
+        "Name your signature, NEW name, not what you have used before. (eg. Mine is Ankur 2025)",
+        "Paste the template that was sent to you in your email, between the red dotted lines.",
+        "Click SAVE, otherwise you won't see this New Template in next step, Dropdowns.",
+        "Pick the new template from the drop-down menu, with name you gave in step 5 (Look at Screen Shot 2, for this step)",
+        "Repeat",
+        "Make sure you hit SAVE on bottom."
+      ],
+      "note": "Call Ankur if you have any questions. 770-608-8199. Please do not put any other links or information in the signature. You will need to change your name and your Title part, only.",
+      "images": [
+        {
+          "src": "/assets/email_sig_1.png",
+          "caption": "Screen Shot 1"
+        },
+        {
+          "src": "/assets/email_sig_2.png",
+          "caption": "Screen Shot 2"
+        }
+      ]
     }
   ]
 }

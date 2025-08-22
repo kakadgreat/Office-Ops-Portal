@@ -1,106 +1,59 @@
 import React from 'react'
-import CollapsibleCard from '../ui/CollapsibleCard.jsx'
-
-export default function Dashboard({ data }){
-  if(!data) return <div>Loading...</div>
-  const links = data.ll?.links || {}
-  const social = data.ll?.social || {}
-  const events = (data.events?.items)||[]
-  const target = {target:'_blank', rel:'noreferrer'}
-
-  const labelFromUrl = (u) => {
-    const h = (u||'').toLowerCase()
-    if(h.includes('instagram.com')) return 'Instagram'
-    if(h.includes('tiktok.com')) return 'TikTok'
-    if(h.includes('youtube.com')) return 'YouTube'
-    if(h.includes('facebook.com')) return 'Facebook'
-    if(h.includes('x.com') || h.includes('twitter.com')) return 'X (Twitter)'
-    if(h.includes('linkedin.com')) return 'LinkedIn'
-    return 'Link'
-  }
-
-  const SocialTable = ({urls=[]}) => (
-    <div className='overflow-auto rounded-xl border bg-white table-zebra'>
-      <table className='w-full text-sm'>
-        <thead className='bg-gray-50 border-b'>
-          <tr><th className='px-3 py-2 text-left'>Platform</th><th className='px-3 py-2 text-left'>URL</th></tr>
-        </thead>
-        <tbody>
-          {urls.map((u,i)=>(
-            <tr key={i} className='border-b last:border-0'>
-              <td className='px-3 py-2'>{labelFromUrl(u)}</td>
-              <td className='px-3 py-2 wrap-link url-small'><a className='underline' href={u} {...target}>{u}</a></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  )
-
-  const SiteSocial = ({title, site, socials=[]}) => (
-    <CollapsibleCard title={title}>
-      <div className='space-y-3'>
-        <div>
-          <div className='font-semibold mb-1'>Website</div>
-          <a className='underline' href={site} {...target}>Open {title}</a>
-        </div>
-        {socials.length>0 && <div>
-          <div className='font-semibold mb-2'>Social</div>
-          <SocialTable urls={socials}/>
-        </div>}
+export default function Dashboard(){
+  const [events,setEvents]=React.useState([])
+  const [links,setLinks]=React.useState({}); const [social,setSocial]=React.useState({})
+  const [gallery,setGallery]=React.useState([]); const scroller=React.useRef(null)
+  React.useEffect(()=>{
+    fetch('/data/events.json').then(r=>r.json()).then(j=>setEvents(j.items||[]))
+    fetch('/data/links.json').then(r=>r.json()).then(j=>{setLinks(j.links||{}); setSocial(j.social||{})})
+    fetch('/data/social_gallery.json').then(r=>r.json()).then(j=>setGallery(j.items||[]))
+  },[])
+  React.useEffect(()=>{ const el=scroller.current; if(!el) return; let raf; const step=()=>{ el.scrollLeft+=0.5; if(el.scrollLeft>=el.scrollWidth-el.clientWidth) el.scrollLeft=0; raf=requestAnimationFrame(step) }; raf=requestAnimationFrame(step); return ()=>cancelAnimationFrame(raf)},[gallery.length])
+  const LinkList=({title,site,arr=[]})=>(<div style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+    <div style={{fontWeight:600,marginBottom:6}}>{title}</div>
+    <div style={{marginBottom:8}}><a href={site} target='_blank' rel='noreferrer'>Open {title}</a></div>
+    <table className='table-zebra' style={{width:'100%',fontSize:14}}><thead><tr><th>Platform</th><th>URL</th></tr></thead><tbody>
+      {arr.map((u,i)=>(<tr key={i}><td>{u.includes('instagram')?'Instagram':u.includes('tiktok')?'TikTok':u.includes('youtube')?'YouTube':u.includes('facebook')?'Facebook':u.includes('x.com')?'X':'Link'}</td><td style={{wordBreak:'break-word'}}><a href={u} target='_blank' rel='noreferrer'>{u}</a></td></tr>))}
+    </tbody></table>
+  </div>)
+  return (<div style={{display:'grid',gap:16}}>
+    <div style={{display:'grid',gap:16,gridTemplateColumns:'repeat(4,1fr)'}}>
+      <div style={{gridColumn:'span 2',background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+        <div style={{fontWeight:600,marginBottom:6}}>Events (from internal guide)</div>
+        <ul>{events.map((e,i)=>(<li key={i}><b>{e.title}</b>{e.date?' — '+e.date:''}</li>))}</ul>
       </div>
-    </CollapsibleCard>
-  )
-
-  return (<div className='space-y-4'>
-    <div className='grid md:grid-cols-4 gap-4'>
-      <CollapsibleCard title='Events (from internal guide)' defaultOpen={true}>
-        <ul className='list-disc ml-5'>{events.slice(0,12).map((e,i)=>(<li key={i}><b>{e.title}</b>{e.date?` — ${e.date}`:''}</li>))}</ul>
-      </CollapsibleCard>
-      <CollapsibleCard title='Quick Links' defaultOpen={true}>
-        <div className='space-y-2'>
-          <div className='font-semibold'>Website</div>
-          <ul className='list-disc ml-5'>
-            <li><a className='underline' href={links.primary} {...target}>Primary Care Website</a></li>
-            <li><a className='underline' href={links.spa} {...target}>Spa Website</a></li>
-            <li><a className='underline' href={links.peds} {...target}>Pediatrics Website</a></li>
-          </ul>
-          <div className='font-semibold mt-3'>Schedule & Time Clock</div>
-          <ul className='list-disc ml-5'>
-            <li><a className='underline' href='https://heartlandhcm.com/login' {...target}>Heartland HCM Login</a> — <span className='text-gray-600'>View schedules and clock in/out.</span></li>
-          </ul>
+      <div style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+        <div style={{fontWeight:600}}>Quick Links</div>
+        <div style={{marginTop:8}}>
+          <div style={{fontWeight:600}}>Website</div>
+          <ul><li><a href={links.primary} target='_blank' rel='noreferrer'>Primary Care Website</a></li><li><a href={links.spa} target='_blank' rel='noreferrer'>Spa Website</a></li><li><a href={links.peds} target='_blank' rel='noreferrer'>Pediatrics Website</a></li></ul>
+          <div style={{fontWeight:600,marginTop:8}}>Schedule & Time Clock</div>
+          <ul><li><a href='https://heartlandhcm.com/login' target='_blank' rel='noreferrer'>Heartland HCM Login</a> — View schedules and clock in/out.</li></ul>
         </div>
-      </CollapsibleCard>
-      <CollapsibleCard title='Contact IT' defaultOpen={true}>
-        <div className='mb-3'>
-          <div><b>Inacomp — 770-255-1022</b></div>
-          <ul className='list-disc ml-5 text-sm text-gray-700'>
-            <li>Windows and email password reset</li>
-            <li>Computer problems, printer issues</li>
-          </ul>
-        </div>
-        <div>
-          <div><b>Epic Help Desk — 404-605-3000</b> <span className='text-sm text-gray-600'>(tell them we are part of Epic Community Connect)</span></div>
-          <ul className='list-disc ml-5 text-sm text-gray-700'>
-            <li>Epic password reset</li>
-            <li>Epic issues</li>
-          </ul>
-        </div>
-      </CollapsibleCard>
-      <CollapsibleCard title='Directory & Tools' defaultOpen={false}>
-        <div><a className='underline' href='/phone'>Phone Directory</a></div>
-        <div className='text-xs text-gray-500 mt-2'>Editor link is at the bottom of the Directory page.</div>
-      </CollapsibleCard>
+      </div>
+      <div style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+        <div style={{fontWeight:600}}>Contact IT</div>
+        <div><b>Inacomp — 770-255-1022</b><div style={{fontSize:14,color:'#555'}}>Windows & email password reset; computer & printer issues</div></div>
+        <div style={{marginTop:8}}><b>Epic Help Desk — 404-605-3000</b> <span style={{fontSize:12,color:'#666'}}>(tell them we are part of Epic Community Connect)</span><div style={{fontSize:14,color:'#555'}}>Epic password reset; Epic issues</div></div>
+      </div>
     </div>
-
-    <div className='grid md:grid-cols-4 gap-4'>
-      <SiteSocial title='Primary Care' site={links.primary} socials={social.primary||[]} />
-      <SiteSocial title='Spa' site={links.spa} socials={social.spa||[]} />
-      <SiteSocial title='Pediatrics' site={links.peds} socials={social.peds||[]} />
-      <CollapsibleCard title='Pediatric After Hours Advice Line' defaultOpen={true}>
-        <img src='/assets/afterhours.jpg' alt='Pediatric After Hours' className='rounded-xl border'/>
-        <div className='mt-2 text-xs text-gray-600'>(770) 851-9947 — Weekdays 5–10 PM • Weekends 8 AM–10 PM</div>
-      </CollapsibleCard>
+    <div style={{display:'grid',gap:16,gridTemplateColumns:'repeat(4,1fr)'}}>
+      <LinkList title='Primary Care' site={links.primary} arr={social.primary||[]}/>
+      <LinkList title='Spa' site={links.spa} arr={social.spa||[]}/>
+      <LinkList title='Pediatrics' site={links.peds} arr={social.peds||[]}/>
+      <div style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+        <div style={{fontWeight:600}}>Pediatric After Hours Advice Line</div>
+        <div>(770) 851-9947 — Weekdays 5–10 PM • Weekends 8 AM–10 PM</div>
+      </div>
+    </div>
+    <div>
+      <div style={{fontWeight:600,marginBottom:6}}>Social Gallery</div>
+      <div ref={scroller} style={{overflowX:'auto',whiteSpace:'nowrap',background:'#fff',border:'1px solid #eee',borderRadius:12,padding:8}}>
+        {(gallery||[]).map((it,i)=>(<span key={i} style={{display:'inline-block',marginRight:12}}>
+          <img src={it.img} alt={it.caption||'post'} style={{height:160,borderRadius:10,border:'1px solid #ddd'}}/>
+          <div style={{fontSize:12,color:'#666',maxWidth:190,overflow:'hidden',textOverflow:'ellipsis'}}>{it.caption}</div>
+        </span>))}
+      </div>
     </div>
   </div>)
 }
