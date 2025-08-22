@@ -3,458 +3,464 @@
     {
       "name": "Dr. Anil Yadav",
       "ext": "1001",
-      "location": "Prestige",
-      "dept": "Canton Providers"
+      "location": "Canton",
+      "dept": "Providers"
     },
     {
       "name": "Dr Monika Yadav",
       "ext": "1002",
-      "location": "Prestige",
-      "dept": "Canton Providers"
+      "location": "Canton",
+      "dept": "Providers"
     },
     {
       "name": "Dr. Nasir Asghar",
       "ext": "1003",
-      "location": "Prestige",
-      "dept": "Canton Providers"
+      "location": "Canton",
+      "dept": "Providers"
     },
     {
       "name": "Dr. Jane Jurma",
       "ext": "1004",
-      "location": "Pediatrics",
-      "dept": "Jasper Providers"
+      "location": "Pediatrics Jasper",
+      "dept": "Providers"
     },
     {
       "name": "Dr. Lee Cline",
       "ext": "1005",
-      "location": "Prestige",
-      "dept": "Rome Providers"
+      "location": "Rome",
+      "dept": "Providers"
     },
     {
-      "name": "Lottie Davenport",
+      "name": "Lottie  Davenport",
       "ext": "1101",
-      "location": "Prestige",
-      "dept": "Jasper Providers"
+      "location": "Jasper",
+      "dept": "Providers"
     },
     {
-      "name": "Amy Mitton",
+      "name": "Amy  Mitton",
       "ext": "1102",
-      "location": "Prestige",
-      "dept": "Jasper Providers"
+      "location": "Jasper",
+      "dept": "Providers"
     },
     {
       "name": "Caroline Garrett",
       "ext": "1103",
-      "location": "Prestige",
-      "dept": "Canton Providers"
+      "location": "Canton",
+      "dept": "Providers"
     },
     {
       "name": "Sasha Milks",
       "ext": "1104",
-      "location": "Prestige",
-      "dept": "Jasper Providers"
+      "location": "Jasper",
+      "dept": "Providers"
     },
     {
       "name": "Daniel Dean",
       "ext": "1105",
-      "location": "Prestige",
-      "dept": "Jasper Providers"
+      "location": "Jasper",
+      "dept": "Providers"
     },
     {
-      "name": "Kimberly Parker",
+      "name": "Kimberly  Parker",
       "ext": "1106",
-      "location": "Prestige",
-      "dept": "Jasper Providers"
+      "location": "Jasper",
+      "dept": "Providers"
     },
     {
       "name": "Laura Craig",
       "ext": "1107",
-      "location": "Prestige",
-      "dept": "Jasper Providers"
+      "location": "Jasper",
+      "dept": "Providers"
     },
     {
       "name": "Caitlyn Smith",
       "ext": "1108",
-      "location": "Prestige",
-      "dept": "Canton Providers"
+      "location": "Canton",
+      "dept": "Providers"
     },
     {
       "name": "Nicole Oconnor",
       "ext": "1109",
-      "location": "Prestige",
-      "dept": "Roswell Providers"
+      "location": "Roswell",
+      "dept": "Providers"
     },
     {
       "name": "Christine Dukes",
       "ext": "1110",
-      "location": "Prestige",
-      "dept": "Canton Providers"
+      "location": "Canton",
+      "dept": "Providers"
     },
     {
       "name": "Chelsea Clevenger",
       "ext": "1111",
-      "location": "Prestige",
-      "dept": "Canton Providers"
+      "location": "Canton",
+      "dept": "Providers"
     },
     {
-      "name": "Anna Kinley",
+      "name": "Anna  Kinley",
       "ext": "1112",
-      "location": "Pediatrics",
-      "dept": "Jasper Providers"
+      "location": "Pediatrics Jasper",
+      "dept": "Providers"
     },
     {
       "name": "Mattie Hollar",
       "ext": "1113",
-      "location": "Pediatrics",
-      "dept": "Jasper Providers"
+      "location": "Pediatrics Jasper",
+      "dept": "Providers"
     },
     {
       "name": "Mallory Fallin",
       "ext": "1114",
-      "location": "Prestige",
-      "dept": "Rome Providers"
+      "location": "Rome",
+      "dept": "Providers"
     },
     {
       "name": "Stephanie Sisson",
       "ext": "1115",
-      "location": "Prestige",
-      "dept": "Rome Providers"
+      "location": "Rome",
+      "dept": "Providers"
     },
     {
       "name": "Caroline Hydrick",
       "ext": "1116",
-      "location": "Prestige",
-      "dept": "Roswell Providers"
+      "location": "Roswell",
+      "dept": "Providers"
     },
     {
       "name": "Stephanie Tyson",
       "ext": "1117",
-      "location": "Prestige",
-      "dept": "Jasper Providers"
+      "location": "Jasper",
+      "dept": "Providers"
     },
     {
-      "name": "Tina barjas",
+      "name": "Tina  barjas",
       "ext": "1118",
-      "location": "Prestige",
-      "dept": "Canton Providers"
+      "location": "Canton",
+      "dept": "Providers"
     },
     {
       "name": "Lottie MA",
       "ext": "2000",
-      "location": "Prestige",
-      "dept": "Jasper MA"
+      "location": "Jasper",
+      "dept": "MA"
     },
     {
       "name": "Amy MA",
       "ext": "2001",
-      "location": "Prestige",
-      "dept": "Jasper MA"
+      "location": "Jasper",
+      "dept": "MA"
     },
     {
       "name": "Sasha MA",
       "ext": "2002",
-      "location": "Prestige",
-      "dept": "Jasper MA"
+      "location": "Jasper",
+      "dept": "MA"
     },
     {
       "name": "Jasper MA1",
       "ext": "2003",
-      "location": "Prestige",
-      "dept": "Jasper MA"
+      "location": "Jasper",
+      "dept": "MA"
     },
     {
       "name": "Jasper MA2",
       "ext": "2004",
-      "location": "Prestige",
-      "dept": "Jasper MA"
+      "location": "Jasper",
+      "dept": "MA"
     },
     {
       "name": "Jasper MA3",
       "ext": "2005",
-      "location": "Prestige",
-      "dept": "Jasper MA"
+      "location": "Jasper",
+      "dept": "MA"
     },
     {
       "name": "Canton 3rd Floor MA1",
       "ext": "2100",
-      "location": "Prestige",
-      "dept": "Canton MA"
+      "location": "Canton",
+      "dept": "MA"
     },
     {
       "name": "Canton 3rd Floor MA2",
       "ext": "2101",
-      "location": "Prestige",
-      "dept": "Canton MA"
+      "location": "Canton",
+      "dept": "MA"
     },
     {
       "name": "Canton 3rd Floor MA3",
       "ext": "2102",
-      "location": "Prestige",
-      "dept": "Canton MA"
+      "location": "Canton",
+      "dept": "MA"
     },
     {
       "name": "Canton 3rd Floor MA4",
       "ext": "2103",
-      "location": "Prestige",
-      "dept": "Canton MA"
+      "location": "Canton",
+      "dept": "MA"
     },
     {
-      "name": "Caroline MA",
+      "name": "Caroline  MA",
       "ext": "2105",
-      "location": "Prestige",
-      "dept": "Canton MA"
+      "location": "Canton",
+      "dept": "MA"
     },
     {
       "name": "Canton 2 floor MA1",
       "ext": "2110",
-      "location": "Prestige",
-      "dept": "Canton MA"
+      "location": "Canton",
+      "dept": "MA"
     },
     {
       "name": "Canton 2 floor MA2",
       "ext": "2111",
-      "location": "Prestige",
-      "dept": "Canton MA"
+      "location": "Canton",
+      "dept": "MA"
     },
     {
       "name": "Canton 2 floor MA3",
       "ext": "2112",
-      "location": "Prestige",
-      "dept": "Canton MA"
+      "location": "Canton",
+      "dept": "MA"
     },
     {
-      "name": "Roswell MA1",
+      "name": "Roswell  MA1",
       "ext": "2201",
-      "location": "Prestige",
-      "dept": "Roswell MA"
+      "location": "Roswell",
+      "dept": "MA"
     },
     {
       "name": "Roswell MA2",
       "ext": "2202",
-      "location": "Prestige",
-      "dept": "Roswell MA"
+      "location": "Roswell",
+      "dept": "MA"
     },
     {
-      "name": "Kara Williams",
+      "name": "Kara  Williams",
       "ext": "2300",
-      "location": "Prestige",
-      "dept": "Rome MA"
+      "location": "Rome",
+      "dept": "MA"
     },
     {
-      "name": "Rome MA1",
+      "name": "Rome  MA1",
       "ext": "2301",
-      "location": "Prestige",
-      "dept": "Rome MA"
+      "location": "Rome",
+      "dept": "MA"
     },
     {
-      "name": "Rome MA2",
+      "name": "Rome  MA2",
       "ext": "2302",
-      "location": "Prestige",
-      "dept": "Rome MA"
+      "location": "Rome",
+      "dept": "MA"
     },
     {
-      "name": "Jasper Peds MA1",
+      "name": "Jasper Peds  MA1",
       "ext": "2601",
-      "location": "Pediatrics",
-      "dept": "Jasper MA"
+      "location": "Pediatrics Jasper",
+      "dept": "MA"
     },
     {
       "name": "Jasper Peds MA2",
       "ext": "2602",
-      "location": "Pediatrics",
-      "dept": "Jasper MA"
+      "location": "Pediatrics Jasper",
+      "dept": "MA"
     },
     {
       "name": "Jasper Peds MA3",
       "ext": "2603",
-      "location": "Pediatrics",
-      "dept": "Jasper MA"
+      "location": "Pediatrics Jasper",
+      "dept": "MA"
     },
     {
       "name": "Canton Peds MA1",
       "ext": "2610",
-      "location": "Pediatrics Canton MAPrestige Medical Group -",
-      "dept": "Phone Directory"
+      "location": "Pediatrics Canton",
+      "dept": "MA"
     },
     {
       "name": "Tami McCardle",
       "ext": "3000",
-      "location": "Prestige",
-      "dept": "Jasper Front Desk"
+      "location": "Jasper",
+      "dept": "Front Desk"
     },
     {
-      "name": "Jasper Check In",
+      "name": "Jasper  Check In",
       "ext": "3001",
-      "location": "Prestige",
-      "dept": "Jasper Front Desk"
+      "location": "Jasper",
+      "dept": "Front Desk"
     },
     {
-      "name": "Jasper Check Out",
+      "name": "Jasper  Check Out",
       "ext": "3002",
-      "location": "Prestige",
-      "dept": "Jasper Front Desk"
+      "location": "Jasper",
+      "dept": "Front Desk"
     },
     {
-      "name": "Jasper Check In Float",
+      "name": "Jasper Check In  Float",
       "ext": "3003",
-      "location": "Prestige",
-      "dept": "Jasper Front Desk"
+      "location": "Jasper",
+      "dept": "Front Desk"
     },
     {
       "name": "Jasper Check out Float",
       "ext": "3004",
-      "location": "Pediatrics",
-      "dept": "Jasper Front Desk"
+      "location": "Pediatrics Jasper",
+      "dept": "Front Desk"
     },
     {
-      "name": "Canton Ste",
-      "ext": "300",
-      "location": "Check Out 3102",
-      "dept": "Prestige Canton Front Desk"
+      "name": "Canton Ste 300 Check In",
+      "ext": "3101",
+      "location": "Canton",
+      "dept": "Front Desk"
     },
     {
-      "name": "Canton Ste",
-      "ext": "202",
-      "location": "Check Out 3111",
-      "dept": "Prestige Canton Front Desk"
+      "name": "Canton Ste 300 Check Out",
+      "ext": "3102",
+      "location": "Canton",
+      "dept": "Front Desk"
     },
     {
-      "name": "Roswell Check In",
+      "name": "Canton Ste 202 Check In",
+      "ext": "3110",
+      "location": "Canton",
+      "dept": "Front Desk"
+    },
+    {
+      "name": "Canton Ste 202 Check Out",
+      "ext": "3111",
+      "location": "Canton",
+      "dept": "Front Desk"
+    },
+    {
+      "name": "Roswell  Check In",
       "ext": "3201",
-      "location": "Prestige",
-      "dept": "Roswell Front Desk"
+      "location": "Roswell",
+      "dept": "Front Desk"
     },
     {
       "name": "Roswell Check Out",
       "ext": "3202",
-      "location": "Prestige",
-      "dept": "Roswell Front Desk"
+      "location": "Roswell",
+      "dept": "Front Desk"
     },
     {
-      "name": "Rome Check In",
+      "name": "Rome  Check In",
       "ext": "3301",
-      "location": "Prestige",
-      "dept": "Rome Front Desk"
+      "location": "Rome",
+      "dept": "Front Desk"
     },
     {
-      "name": "Rome Checkout Call Center 4",
+      "name": "Rome Checkout  Call Center 4",
       "ext": "3302",
-      "location": "Prestige",
-      "dept": "Rome Front Desk"
+      "location": "Rome",
+      "dept": "Front Desk"
     },
     {
       "name": "Jasper Peds Check In",
       "ext": "3601",
-      "location": "Pediatrics",
-      "dept": "Jasper Front Desk"
+      "location": "Pediatrics Jasper",
+      "dept": "Front Desk"
     },
     {
       "name": "Jasper Peds Check Out",
       "ext": "3602",
-      "location": "Pediatrics",
-      "dept": "Jasper Front Desk"
+      "location": "Pediatrics Jasper",
+      "dept": "Front Desk"
     },
     {
-      "name": "Canton Peds Check In",
+      "name": "Canton Peds  Check In",
       "ext": "3610",
-      "location": "Pediatrics",
-      "dept": "Canton Front Desk"
+      "location": "Pediatrics Canton",
+      "dept": "Front Desk"
     },
     {
       "name": "Tracy Clark",
       "ext": "4001",
-      "location": "Prestige",
-      "dept": "Jasper Admin"
+      "location": "Jasper",
+      "dept": "Admin"
     },
     {
-      "name": "Call Center 1",
+      "name": "Call Center  1",
       "ext": "5550",
-      "location": "Prestige",
-      "dept": "Jasper Call Center"
+      "location": "Jasper",
+      "dept": "Call Center"
     },
     {
-      "name": "Call Center 2",
+      "name": "Call Center  2",
       "ext": "5551",
-      "location": "Prestige",
-      "dept": "Jasper Call Center"
+      "location": "Jasper",
+      "dept": "Call Center"
     },
     {
-      "name": "Call Center 3",
+      "name": "Call Center  3",
       "ext": "5552",
-      "location": "Prestige",
-      "dept": "Jasper Call Center"
+      "location": "Jasper",
+      "dept": "Call Center"
     },
     {
-      "name": "Call Center 5",
+      "name": "Call Center  5",
       "ext": "5553",
-      "location": "Prestige",
-      "dept": "Jasper Call Center"
+      "location": "Jasper",
+      "dept": "Call Center"
     },
     {
-      "name": "Call Center 4",
+      "name": "Call Center  4",
       "ext": "5554",
-      "location": "Prestige",
-      "dept": "Jasper Call Center"
+      "location": "Jasper",
+      "dept": "Call Center"
     },
     {
-      "name": "Leslie Roper",
+      "name": "Leslie  Roper",
       "ext": "6001",
-      "location": "Prestige",
-      "dept": "Canton Admin"
+      "location": "Canton",
+      "dept": "Admin"
     },
     {
       "name": "Trina Chastian",
       "ext": "6002",
-      "location": "Prestige",
-      "dept": "Jasper Admin"
+      "location": "Jasper",
+      "dept": "Admin"
     },
     {
-      "name": "Laura Hughes",
+      "name": "Laura  Hughes",
       "ext": "6003",
-      "location": "Prestige",
-      "dept": "Jasper Admin"
+      "location": "Jasper",
+      "dept": "Admin"
     },
     {
       "name": "Kimberly O'Brien Spa Phone",
       "ext": "7001",
-      "location": "Prestige",
-      "dept": "Jasper Spa"
+      "location": "Jasper",
+      "dept": "Spa"
     },
     {
       "name": "Canton Spa",
       "ext": "7002",
-      "location": "Prestige",
-      "dept": "Canton Spa"
+      "location": "Canton",
+      "dept": "Spa"
     },
     {
-      "name": "Jasper Spa",
+      "name": "Jasper  Spa",
       "ext": "7003",
-      "location": "Prestige",
-      "dept": "Jasper Spa"
+      "location": "Jasper",
+      "dept": "Spa"
     },
     {
-      "name": "Roswell Spa",
+      "name": "Roswell  Spa",
       "ext": "7004",
-      "location": "Prestige",
-      "dept": "Roswell Spa"
+      "location": "Roswell",
+      "dept": "Spa"
     },
     {
-      "name": "Rome Spa",
+      "name": "Rome  Spa",
       "ext": "7005",
-      "location": "Prestige",
-      "dept": "Rome Spa"
+      "location": "Rome",
+      "dept": "Spa"
     },
     {
-      "name": "Ankur Yadav",
+      "name": "Ankur  Yadav",
       "ext": "8001",
-      "location": "Prestige",
-      "dept": "Canton Admin"
-    },
-    {
-      "name": "Marschelle Weeks",
-      "ext": "8002",
-      "location": "Prestige",
-      "dept": "Canton Admin"
+      "location": "Canton",
+      "dept": "Admin"
     }
   ]
 }
