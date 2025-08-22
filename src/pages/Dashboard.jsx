@@ -45,9 +45,21 @@ export default function Dashboard({ data }){
         </div>
       </CollapsibleCard>
 
-      <CollapsibleCard title='Contact IT' defaultOpen={false}>
-        <div>Inacomp — 770-255-1022</div>
-        <div>Epic Help Desk — 404-605-3000</div>
+      <CollapsibleCard title='Contact IT' defaultOpen={true}>
+        <div className='mb-3'>
+          <div><b>Inacomp — 770-255-1022</b></div>
+          <ul className='list-disc ml-5 text-sm text-gray-700'>
+            <li>Windows and email password reset</li>
+            <li>Computer problems, printer issues</li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Epic Help Desk — 404-605-3000</b> <span className='text-sm text-gray-600'>(tell them we are part of Epic Community Connect)</span></div>
+          <ul className='list-disc ml-5 text-sm text-gray-700'>
+            <li>Epic password reset</li>
+            <li>Epic issues</li>
+          </ul>
+        </div>
       </CollapsibleCard>
 
       <CollapsibleCard title='Directory & Tools' defaultOpen={false}>
