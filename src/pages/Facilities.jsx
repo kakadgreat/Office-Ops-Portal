@@ -4,7 +4,11 @@ export default function Facilities({ data }){
   if(!data) return <div>Loading...</div>
   const cats=(data.facilities?.categories)||[]
   if(cats.length===0) return <div>No facilities vendors found. Add them in <code>public/data/facilities.json</code>.</div>
-  return (<div className='grid md:grid-cols-2 gap-4'>
+  return (<div className='space-y-4'>
+    <div className='no-print flex gap-2 justify-end'>
+      <button onClick={()=>window.print()} className='border rounded px-3 py-1'>Print / Export PDF</button>
+    </div>
+    <div className='grid md:grid-cols-2 gap-4'>
     {cats.map((c,i)=>(
       <CollapsibleCard key={i} title={c.category} defaultOpen={false}>
         <div className='space-y-2'>

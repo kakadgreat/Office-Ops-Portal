@@ -22,3 +22,13 @@
 @media (max-width:640px){
   header .max-w-6xl{ padding-top:6px; padding-bottom:6px }
 }
+
+
+/* Wrap long URLs cleanly */
+.wrap-link { word-break: break-word; overflow-wrap: anywhere; }
+
+/* Collapsible sections: always expanded when printing */
+@media print{
+  .collapsible-content{ display:block !important }
+  .no-print, button { display:none !important }
+}

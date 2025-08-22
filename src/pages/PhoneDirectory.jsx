@@ -27,6 +27,9 @@ export default function PhoneDirectory({ data, query }){
   const header=(label,col)=><th onClick={()=>setSort({col,asc:sort.col===col?!sort.asc:true})} className='px-3 py-2 cursor-pointer text-left select-none'>{label}{sort.col===col?(sort.asc?' ▲':' ▼'):''}</th>
 
   return (<div className='space-y-4'>
+    <div className='no-print flex gap-2 justify-end'>
+      <button onClick={()=>window.print()} className='border rounded px-3 py-1'>Print / Export PDF</button>
+    </div>
     <CollapsibleCard title='Filters' defaultOpen={true}>
       <div className='flex flex-wrap gap-2 items-center'>
         <div className='font-semibold mr-2'>Location:</div>
