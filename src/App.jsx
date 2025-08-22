@@ -8,7 +8,7 @@ import PhoneDirectoryEdit from './pages/PhoneDirectoryEdit.jsx'
 import FAQ from './pages/FAQ.jsx'
 import Banner from './ui/Banner.jsx'
 
-const NavItem=({to,label})=>(<NavLink to={to} className={({isActive})=>`px-3 py-2 rounded-xl hover:bg-gray-100 ${isActive?'bg-gray-200':''}`}>{label}</NavLink>)
+const NavItem=({to,label,extra=''})=>(<NavLink to={to} className={({isActive})=>`px-3 py-2 rounded-xl hover:bg-gray-100 ${extra} ${isActive?'bg-gray-200':''}`}>{label}</NavLink>)
 
 export default function App(){
   const [data,setData]=React.useState(null)
@@ -23,7 +23,7 @@ export default function App(){
       <div className='max-w-6xl mx-auto px-4 py-2 flex items-center gap-3'>
         <div className='text-lg sm:text-xl font-semibold'>PMG Ops Portal</div>
         <nav className='flex flex-wrap gap-2 text-sm'>
-          <NavItem to='/' label='Dashboard'/>
+          <NavItem to='/' label='Dashboard' extra='bg-green-50 border border-green-200'/>
           <NavItem to='/offices' label='Locations'/>
           <NavItem to='/facilities' label='Facilities Rolodex'/>
           <NavItem to='/phone' label='Phone Directory'/>

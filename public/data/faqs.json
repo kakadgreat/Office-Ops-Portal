@@ -2,7 +2,8 @@
   "items": [
     {
       "id": "new-phone-authenticator",
-      "title": "New phone? Reset Microsoft Authenticator the right way",
+      "title": "New cell phone steps: Microsoft Authenticator reset",
+      "short": "New cell phone steps",
       "tags": [
         "Inacomp",
         "Authenticator",
@@ -21,7 +22,8 @@
     },
     {
       "id": "send-fax-nextiva-vfax",
-      "title": "Sending faxes with Nextiva vFAX",
+      "title": "Send out fax: Nextiva vFAX portal",
+      "short": "Send out fax",
       "tags": [
         "Fax",
         "Nextiva",
@@ -50,6 +52,19 @@
         "Click **Send** to finish.",
         "Notes: A fax cannot be canceled once sent; typical send speed is 1\u20133 minutes per page."
       ]
+    },
+    {
+      "id": "email-signature-setup",
+      "title": "Setup email signature",
+      "short": "Setup email signature",
+      "tags": [
+        "Email",
+        "Signature",
+        "Outlook",
+        "Setup"
+      ],
+      "steps": [],
+      "note": "Only change your **Name** and **Title**. Do not add other links or information. Call Ankur if you have questions: 770-608-8199."
     }
   ]
 }

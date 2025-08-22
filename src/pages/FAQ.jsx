@@ -12,7 +12,7 @@ export default function FAQ(){
   return (<div className='space-y-4'>
     <div className='sticky-subnav bg-white border rounded-xl p-3 flex flex-wrap items-center gap-2'>
       <div className='font-semibold mr-2'>Jump to:</div>
-      {items.map(i=> <Anchor key={i.id} id={i.id}>{i.title.split(' ')[0]}</Anchor>)}
+      {items.map(i=> <Anchor key={i.id} id={i.id}>{i.short || i.title}</Anchor>)}
       <div className='ml-auto hidden md:block'>
         <div className='font-semibold mb-1'>Tag cloud</div>
         <div className='tagcloud'>{allTags.map(t=> <a key={t} href={`#tag-${t}`} className='mr-2'>{t}</a>)}</div>
