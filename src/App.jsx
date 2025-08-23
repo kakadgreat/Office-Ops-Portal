@@ -1,3 +1,4 @@
+import Gallery from './pages/Gallery'
 import React from 'react'
 import { Routes, Route, NavLink } from 'react-router-dom'
 import Dashboard from './pages/Dashboard.jsx'
@@ -18,18 +19,14 @@ export default function App(){
           <NavItem to='/facilities' label='Facilities Rolodex'/>
           <NavItem to='/phone' label='Phone Directory'/>
           <NavItem to='/faq' label='FAQ'/>
-        </nav>
+          <a href='/gallery' className='nav-pill'>Gallery</a>
+</nav>
       </div>
     </header>
     <main style={{maxWidth:1000,margin:'0 auto',padding:16}}>
-      <Routes>
-        <Route index element={<Dashboard/>}/>
-        <Route path='/offices' element={<Offices/>}/>
-        <Route path='/facilities' element={<Facilities/>}/>
-        <Route path='/phone' element={<PhoneDirectory/>}/>
-        <Route path='/phone/edit' element={<PhoneDirectoryEdit/>}/>
-        <Route path='/faq' element={<FAQ/>}/>
-      </Routes>
+      \1
+        <Route path='/gallery' element={<Gallery/>} />
+      \2
     </main>
   </div>)
 }
