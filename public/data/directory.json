@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "name": "Dr. Emily Carter",
+      "role": "Provider",
+      "dept": "Primary Care",
+      "location": "Jasper",
+      "ext": "1101",
+      "email": "e.carter@pmg.local"
+    },
+    {
+      "name": "Dr. Victor Huang",
+      "role": "Provider",
+      "dept": "Primary Care",
+      "location": "Roswell",
+      "ext": "1201",
+      "email": "v.huang@pmg.local"
+    },
+    {
+      "name": "Jordan Lee, FNP",
+      "role": "Provider",
+      "dept": "Primary Care",
+      "location": "Rome",
+      "ext": "1301",
+      "email": "j.lee@pmg.local"
+    },
+    {
+      "name": "Priya Shah, MA",
+      "role": "MA",
+      "dept": "Primary Care",
+      "location": "Jasper",
+      "ext": "2104",
+      "email": "p.shah@pmg.local"
+    },
+    {
+      "name": "Kevin Tran, MA",
+      "role": "MA",
+      "dept": "Primary Care",
+      "location": "Roswell",
+      "ext": "2208",
+      "email": "k.tran@pmg.local"
+    },
+    {
+      "name": "Front Desk \u2014 Jasmine Reed",
+      "role": "Front Desk",
+      "dept": "Front Desk",
+      "location": "Jasper",
+      "ext": "3100",
+      "email": "j.reed@pmg.local"
+    },
+    {
+      "name": "Front Desk \u2014 Chris Vega",
+      "role": "Front Desk",
+      "dept": "Front Desk",
+      "location": "Roswell",
+      "ext": "3200",
+      "email": "c.vega@pmg.local"
+    },
+    {
+      "name": "Spa \u2014 Kim Alvarez",
+      "role": "Spa",
+      "dept": "MedSpa",
+      "location": "Canton",
+      "ext": "4102",
+      "email": "k.alvarez@pmg.local"
+    },
+    {
+      "name": "Spa \u2014 Naomi Patel",
+      "role": "Spa",
+      "dept": "MedSpa",
+      "location": "Roswell",
+      "ext": "4203",
+      "email": "n.patel@pmg.local"
+    },
+    {
+      "name": "IT \u2014 Inacomp",
+      "role": "Other",
+      "dept": "IT",
+      "location": "Remote",
+      "ext": "",
+      "email": "help@inacomp.com"
+    }
+  ]
+}

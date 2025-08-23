@@ -14,7 +14,7 @@ export default function Gallery(){
         <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12}}>
           {items.map((it,i)=>(
             <a key={i} href={it.href||'#'} target="_blank" rel="noreferrer" className="wrap-link" style={{display:'block'}}>
-              <img src={it.img} alt={it.caption||'media'} style={{width:'100%', borderRadius:8, border:'1px solid #e5e7eb'}}/>
+              <img src={it.img} alt={it.caption||'media'} style={{width:'100%', borderRadius:8, border:'1px solid #e5e7eb'}} onError={(e)=>{e.currentTarget.src='/assets/gallery/tile1.svg'}}/>
               {it.caption && <div style={{fontSize:12, marginTop:6, color:'#555'}}>{it.caption}</div>}
             </a>
           ))}

@@ -1,19 +1,64 @@
 {
   "items": [
     {
-      "img": "https://img.youtube.com/vi/28XPYHjU3RM/hqdefault.jpg",
-      "caption": "PMG Office Tour (HD)",
-      "href": "https://www.youtube.com/watch?v=28XPYHjU3RM"
+      "img": "/assets/gallery/tile1.svg",
+      "caption": "Office Tour",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
     },
     {
-      "img": "https://img.youtube.com/vi/0k5xHqL8R1o/hqdefault.jpg",
-      "caption": "Welcome to PMG \u2014 Jasper",
-      "href": "https://www.youtube.com/watch?v=0k5xHqL8R1o"
+      "img": "/assets/gallery/tile2.svg",
+      "caption": "Welcome\u2014Jasper",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
     },
     {
-      "img": "https://img.youtube.com/vi/7Dg2Tixqk2I/hqdefault.jpg",
+      "img": "/assets/gallery/tile3.svg",
       "caption": "Roswell Office",
-      "href": "https://www.youtube.com/watch?v=7Dg2Tixqk2I"
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
+    },
+    {
+      "img": "/assets/gallery/tile4.svg",
+      "caption": "MedSpa Highlights",
+      "href": "https://www.youtube.com/@PrestigeMedSpas"
+    },
+    {
+      "img": "/assets/gallery/tile5.svg",
+      "caption": "Pediatrics \u2014 Tips",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
+    },
+    {
+      "img": "/assets/gallery/tile6.svg",
+      "caption": "Clinic Day",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
+    },
+    {
+      "img": "/assets/gallery/tile7.svg",
+      "caption": "Meet the Team",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
+    },
+    {
+      "img": "/assets/gallery/tile8.svg",
+      "caption": "SkinCare\u2014MedSpa",
+      "href": "https://www.youtube.com/@PrestigeMedSpas"
+    },
+    {
+      "img": "/assets/gallery/tile9.svg",
+      "caption": "Behind the Scenes",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
+    },
+    {
+      "img": "/assets/gallery/tile10.svg",
+      "caption": "Rome Office",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
+    },
+    {
+      "img": "/assets/gallery/tile11.svg",
+      "caption": "Canton Office",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
+    },
+    {
+      "img": "/assets/gallery/tile12.svg",
+      "caption": "Community Event",
+      "href": "https://www.youtube.com/@PrestigeMedGroup"
     }
   ]
 }

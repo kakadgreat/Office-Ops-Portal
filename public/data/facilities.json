@@ -4,19 +4,20 @@
       "category": "Roswell Office",
       "vendors": [
         {
-          "name": "Devin Wilson (Plaza POC)",
+          "name": "Property Manager \u2014 Devin Wilson",
           "phone": "910-262-7583"
         },
         {
-          "name": "Flying Locksmiths (Sue Allen)",
-          "phone": "678-462-9024"
+          "name": "Flying Locksmiths \u2014 Sue Allen",
+          "phone": "678-462-9024",
+          "note": "Keys / doors"
         },
         {
-          "name": "GHS Inc HVAC (Onel Robaina)",
+          "name": "GHS Inc HVAC \u2014 Onel Robaina",
           "phone": "404-509-9824"
         },
         {
-          "name": "The Heating and Air Company (Sam Colon)",
+          "name": "The Heating and Air Co \u2014 Sam Colon",
           "phone": "678-500-6925",
           "email": "theheatingandaircompanyllc@gmail.com"
         }
@@ -33,6 +34,31 @@
           "name": "Plumber \u2014 Chris Amos",
           "phone": "770-845-4664",
           "note": "Text only; 3\u20134 day response"
+        },
+        {
+          "name": "Security / Alarm",
+          "phone": "###-###-####"
+        },
+        {
+          "name": "Janitorial \u2014 Vendor",
+          "phone": "###-###-####"
+        }
+      ]
+    },
+    {
+      "category": "Jasper Office",
+      "vendors": [
+        {
+          "name": "Landlord Contact",
+          "phone": "###-###-####"
+        },
+        {
+          "name": "Electrician",
+          "phone": "###-###-####"
+        },
+        {
+          "name": "Waste / Recycling",
+          "phone": "###-###-####"
         }
       ]
     }
