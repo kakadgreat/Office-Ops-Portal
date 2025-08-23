@@ -1,45 +1,30 @@
 import React from 'react'
-import { Routes, Route, useLocation, Link } from 'react-router-dom'
-import Dashboard from './pages/Dashboard'
-import Offices from './pages/Offices'
-import Rolodex from './pages/Rolodex'
-import Gallery from './pages/Gallery'
-import Directory from './pages/Directory'
-import FormFacility from './pages/forms/FormFacility'
-import FormSupplies from './pages/forms/FormSupplies'
-import FormTimeOff from './pages/forms/FormTimeOff'
-import Thanks from './pages/forms/Thanks'
-
-function Nav(){
-  const location = useLocation()
-  const active = (p)=> location.pathname===p ? 'nav-pill active' : 'nav-pill'
-  return (
-    <nav className="top">
-      <span className="brand">PMG Ops Portal</span>
-      <Link to="/" className={active('/')}>Dashboard</Link>
-      <Link to="/locations" className={active('/locations')}>Locations</Link>
-      <Link to="/rolodex" className={active('/rolodex')}>Facilities Rolodex</Link>
-      <Link to="/gallery" className={active('/gallery')}>Gallery</Link>
-      <Link to="/directory" className={active('/directory')}>Phone Directory</Link>
-    </nav>
-  )
-}
-
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import Dashboard from './pages/Dashboard.jsx'
+import Offices from './pages/Offices.jsx'
+import Rolodex from './pages/Rolodex.jsx'
+import Directory from './pages/Directory.jsx'
+import Gallery from './pages/Gallery.jsx'
 export default function App(){
-  return (
-    <>
-      <Nav/>
+  const loc = useLocation()
+  const active = (p)=> 'pill'+(loc.pathname===p?' active':'')
+  return (<div>
+    <div className="nav"><div className="nav-inner container">
+      <div className="brand">PMG Ops Portal</div>
+      <Link className={active('/')} to="/">Dashboard</Link>
+      <Link className={active('/locations')} to="/locations">Locations</Link>
+      <Link className={active('/rolodex')} to="/rolodex">Facilities Rolodex</Link>
+      <Link className={active('/directory')} to="/directory">Phone Directory</Link>
+      <Link className={active('/gallery')} to="/gallery">Gallery</Link>
+    </div></div>
+    <div className="container">
       <Routes>
         <Route path="/" element={<Dashboard/>} />
         <Route path="/locations" element={<Offices/>} />
         <Route path="/rolodex" element={<Rolodex/>} />
-        <Route path="/gallery" element={<Gallery/>} />
         <Route path="/directory" element={<Directory/>} />
-        <Route path="/form/facility-issue" element={<FormFacility/>} />
-        <Route path="/form/order-supplies" element={<FormSupplies/>} />
-        <Route path="/form/time-off" element={<FormTimeOff/>} />
-        <Route path="/thanks" element={<Thanks/>} />
+        <Route path="/gallery" element={<Gallery/>} />
       </Routes>
-    </>
-  )
+    </div>
+  </div>)
 }

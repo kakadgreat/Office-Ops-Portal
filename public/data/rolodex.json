@@ -1,0 +1,53 @@
+{
+  "vendors": [
+    {
+      "office": "Roswell",
+      "category": "Property Mgmt",
+      "name": "Property Manager",
+      "contact": "Devin Wilson",
+      "phone": "910-262-7583",
+      "notes": ""
+    },
+    {
+      "office": "Roswell",
+      "category": "Locksmith",
+      "name": "The Flying Locksmiths",
+      "contact": "Sue Allen",
+      "phone": "678-462-9024",
+      "notes": "Keys / doors"
+    },
+    {
+      "office": "Roswell",
+      "category": "HVAC",
+      "name": "GHS Inc HVAC (Atlanta)",
+      "contact": "Onel Robaina",
+      "phone": "404-509-9824",
+      "notes": ""
+    },
+    {
+      "office": "Roswell",
+      "category": "HVAC",
+      "name": "The Heating and Air Co",
+      "contact": "Sam Colon",
+      "phone": "678-500-6925",
+      "notes": "theheatingandaircompanyllc@gmail.com"
+    },
+    {
+      "office": "Canton",
+      "category": "HVAC",
+      "name": "Controlled Climate Services",
+      "contact": "",
+      "phone": "770-432-3869",
+      "notes": ""
+    },
+    {
+      "office": "Canton",
+      "category": "Plumber",
+      "name": "Chris Amos",
+      "contact": "Chris Amos",
+      "phone": "770-845-4664",
+      "notes": "Text only; 3\u20134 day response"
+    }
+  ],
+  "pointsOfContact": []
+}

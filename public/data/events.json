@@ -2,23 +2,33 @@
   "items": [
     {
       "title": "Top Golf Staff Outing",
-      "detail": "Saturday, September 20, 2025, 4\u20137 PM"
+      "date": "2025-09-20",
+      "time": "2\u20137 PM"
     },
     {
       "title": "Marble Festival 5K",
-      "detail": "October 4, 2025"
+      "date": "2025-10-04"
     },
     {
       "title": "CadeStrong 5K Walk & Wheelchair Roll",
-      "detail": "September 13, 2025"
+      "date": "2025-09-13"
     },
     {
       "title": "Boating at Little River Marina",
-      "detail": "May 17, 2025"
+      "date": "2025-05-17"
+    },
+    {
+      "title": "Bowling at Stars and Strikes",
+      "date": "2025-07-19",
+      "time": "6\u20138 PM"
     },
     {
       "title": "Black & White Ball",
-      "detail": "January 18, 2025 (6\u201311 PM)"
+      "date": "2025-01-18",
+      "time": "6\u201311 PM"
+    },
+    {
+      "title": "First Fridays Sponsorship (Canton)"
     }
   ]
 }

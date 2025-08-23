@@ -1,0 +1,49 @@
+{
+  "groups": [
+    {
+      "audience": "Front Desk",
+      "links": [
+        {
+          "label": "Heartland HCM \u2014 Schedules & Time Clock",
+          "href": "https://heartlandhcm.com/login",
+          "newTab": true
+        },
+        {
+          "label": "Primary Care Website",
+          "href": "https://www.prestigemedicalgroup.org/",
+          "newTab": true
+        }
+      ]
+    },
+    {
+      "audience": "MA",
+      "links": [
+        {
+          "label": "Pediatrics Website",
+          "href": "https://www.prestigepediatricsga.com/",
+          "newTab": true
+        }
+      ]
+    },
+    {
+      "audience": "Provider",
+      "links": [
+        {
+          "label": "Open PMG",
+          "href": "https://www.prestigemedicalgroup.org/",
+          "newTab": true
+        }
+      ]
+    },
+    {
+      "audience": "Spa",
+      "links": [
+        {
+          "label": "Open Med Spa",
+          "href": "https://www.prestigemedspa.org/",
+          "newTab": true
+        }
+      ]
+    }
+  ]
+}

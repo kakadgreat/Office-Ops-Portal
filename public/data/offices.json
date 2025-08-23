@@ -1,76 +1,51 @@
 {
-  "items": [
+  "offices": [
     {
       "name": "Jasper Primary Care",
-      "service": "Primary Care",
+      "type": "Primary Care",
       "address": "51 Gordon Rd, Jasper, GA 30143",
-      "hours": "Mon\u2013Fri 8\u20135",
-      "phone": "706-692-9768",
-      "link": "https://www.prestigemedicalgroup.org/locations/jasper-primary-care"
+      "website": "https://www.prestigemedicalgroup.org/locations/jasper-primary-care"
     },
     {
       "name": "Prestige Pediatrics in Jasper",
-      "service": "Pediatrics",
+      "type": "Pediatrics",
       "address": "53 Gordon Rd, Suite 101, Jasper, GA 30143",
-      "hours": "Mon\u2013Fri 8\u20135",
-      "phone": "706-692-9768",
-      "link": "https://www.prestigepediatricsga.com/"
+      "website": "https://www.prestigepediatricsga.com/"
     },
     {
       "name": "Canton Primary Care",
-      "service": "Primary Care",
-      "address": "720 Transit Ave, Canton, GA 30114",
-      "hours": "Mon\u2013Fri 8\u20135",
-      "phone": "770-926-6363",
-      "link": "https://www.prestigemedicalgroup.org/locations/canton-primary-care"
+      "type": "Primary Care",
+      "website": "https://www.prestigemedicalgroup.org/locations/canton-primary-care"
     },
     {
       "name": "Roswell Primary Care",
-      "service": "Primary Care",
-      "address": "2500 Old Alabama Rd, Roswell, GA 30076",
-      "hours": "Mon\u2013Fri 8\u20135",
-      "phone": "770-642-7900",
-      "link": "https://www.prestigemedicalgroup.org/locations/roswell-primary-care"
+      "type": "Primary Care",
+      "website": "https://www.prestigemedicalgroup.org/locations/roswell-primary-care"
     },
     {
       "name": "Rome Primary Care",
-      "service": "Primary Care",
-      "address": "15 John Maddox Dr NW, Rome, GA 30165",
-      "hours": "Mon\u2013Fri 8\u20135",
-      "phone": "706-291-0291",
-      "link": "https://www.prestigemedicalgroup.org/locations/rome-primary-care"
+      "type": "Primary Care",
+      "website": "https://www.prestigemedicalgroup.org/locations/rome-primary-care"
     },
     {
       "name": "Prestige Pediatrics in Canton",
-      "service": "Pediatrics",
-      "address": "320 Hospital Rd, Canton, GA 30114",
-      "hours": "Mon\u2013Fri 8\u20135",
-      "phone": "770-720-2233",
-      "link": "https://www.prestigepediatricsga.com/"
+      "type": "Pediatrics",
+      "website": "https://www.prestigepediatricsga.com/"
     },
     {
       "name": "Canton MedSpa (Sixes)",
-      "service": "MedSpa",
-      "address": "2275 Marietta Hwy, Canton, GA 30114",
-      "hours": "Mon\u2013Sat",
-      "phone": "770-926-6363",
-      "link": "https://www.prestigemedspa.org/"
+      "type": "MedSpa",
+      "website": "https://www.prestigemedspa.org/"
     },
     {
       "name": "Roswell MedSpa",
-      "service": "MedSpa",
-      "address": "580 E Crossville Rd, Roswell, GA 30075",
-      "hours": "Mon\u2013Sat",
-      "phone": "770-642-7900",
-      "link": "https://www.prestigemedspa.org/"
+      "type": "MedSpa",
+      "website": "https://www.prestigemedspa.org/"
     },
     {
       "name": "Rome MedSpa",
-      "service": "MedSpa",
-      "address": "15 John Maddox Dr NW, Rome, GA 30165",
-      "hours": "Mon\u2013Sat",
-      "phone": "706-291-0291",
-      "link": "https://www.prestigemedspa.org/"
+      "type": "MedSpa",
+      "website": "https://www.prestigemedspa.org/"
     }
   ]
 }
