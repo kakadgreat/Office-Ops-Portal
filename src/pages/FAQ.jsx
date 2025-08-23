@@ -25,11 +25,11 @@ export default function FAQ(){
       {tagSel.size>0 && <div style={{marginTop:6,fontSize:12,color:'#666'}}>Filtering by: {[...tagSel].join(', ')}</div>}
     </div>
     <div style={{display:'grid',gap:16,gridTemplateColumns:'repeat(2,1fr)'}}>
-      {filtered.map(i=>(
+      {filtered.map(i=>{ const [open,setOpen]=React.useState(true); return (
         <div key={i.id} id={i.id} style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
-          <div style={{fontWeight:600,marginBottom:6}}>{i.title}</div>
-          {i.links && <div><div style={{fontWeight:600}}>Links</div><ul>{i.links.map((l,idx)=>(<li key={idx}><a href={l.url} target='_blank' rel='noreferrer'>{l.label}</a></li>))}</ul></div>}
-          <div><div style={{fontWeight:600}}>Steps</div>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:6}}><div style={{fontWeight:600}}>{i.title}</div><button className='collapse-btn' onClick={()=>setOpen(o=>!o)}>{open?'Collapse':'Expand'}</button></div>
+          {open && i.links && <div><div style={{fontWeight:600}}>Links</div><ul>{i.links.map((l,idx)=>(<li key={idx}><a href={l.url} target='_blank' rel='noreferrer'>{l.label}</a></li>))}</ul></div>}
+          {open && <div><div style={{fontWeight:600}}>Steps</div>
             <div className='collapsible-content'>
               <table style={{width:'100%',fontSize:14}} className='table-zebra'>
                 <thead style={{background:'#f5f5f5',borderBottom:'1px solid #eee'}}><tr><th style={{textAlign:'left',padding:'8px 12px'}}>#</th><th style={{textAlign:'left',padding:'8px 12px'}}>Action</th></tr></thead>
@@ -37,11 +37,11 @@ export default function FAQ(){
               </table>
             </div>
           </div>
-          {i.note && <div style={{color:'#b91c1c',marginTop:8}}>{i.note}</div>}
-          {i.images && <div style={{display:'grid',gap:8,gridTemplateColumns:'repeat(2,1fr)',marginTop:8}}>{i.images.map((im,idx)=>(<figure key={idx}><img src={im.src} style={{maxWidth:'100%',borderRadius:8,border:'1px solid #ddd'}}/><figcaption style={{fontSize:12,color:'#666'}}>{im.caption}</figcaption></figure>))}</div>}
-          {(i.tags||[]).length>0 && <div style={{marginTop:8}}><div style={{fontWeight:600}}>Tags</div><div>{i.tags.map(t=> <span key={t} className='pill' style={{marginRight:6}}>{t}</span>)}</div></div>}
+          {open && i.note && <div style={{color:'#b91c1c',marginTop:8}}>{i.note}</div>}
+          {open && i.images && <div style={{display:'grid',gap:8,gridTemplateColumns:'repeat(2,1fr)',marginTop:8}}>{i.images.map((im,idx)=>(<figure key={idx}><img src={im.src} style={{maxWidth:'100%',borderRadius:8,border:'1px solid #ddd'}}/><figcaption style={{fontSize:12,color:'#666'}}>{im.caption}</figcaption></figure>))}</div>}
+          {open && (i.tags||[]).length>0 && <div style={{marginTop:8}}><div style={{fontWeight:600}}>Tags</div><div>{i.tags.map(t=> <span key={t} className='pill' style={{marginRight:6}}>{t}</span>)}</div></div>}
         </div>
       ))}
     </div>
-  </div>)
+  </div>)})
 }

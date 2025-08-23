@@ -12,7 +12,7 @@ export default function App(){
     <header style={{position:'sticky',top:0,background:'#fff',borderBottom:'1px solid #eee',padding:12,zIndex:5}}>
       <div style={{maxWidth:1000,margin:'0 auto',display:'flex',gap:8,alignItems:'center',flexWrap:'wrap'}}>
         <div style={{fontWeight:700}}>PMG Ops Portal</div>
-        <nav style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+        <nav className='topnav' style={{display:'flex',gap:8,flexWrap:'wrap'}}>
           <NavItem to='/' label='Dashboard'/>
           <NavItem to='/offices' label='Locations'/>
           <NavItem to='/facilities' label='Facilities Rolodex'/>

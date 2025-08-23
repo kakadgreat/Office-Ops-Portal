@@ -1,8 +1,16 @@
 import React from 'react'
 export default function Facilities(){
+  const [showFilters,setShowFilters]=React.useState(true);
   const [cats,setCats]=React.useState([])
   React.useEffect(()=>{ fetch('/data/facilities.json').then(r=>r.json()).then(j=> setCats(j.categories||[])) },[])
   return (<div style={{display:'grid',gap:16}}>
+  <div className='page-title'>Facilities Rolodex</div>
+  <div className='collapsible no-print'>
+    <div className='collapsible-header'>
+      <span>Filters</span>
+      <button className='collapse-btn' onClick={()=>setShowFilters(s=>!s)}>{showFilters?'Collapse':'Expand'}</button>
+    </div>
+    {showFilters && (<div className='collapsible-content'>
     <div className='no-print' style={{textAlign:'right'}}><button onClick={()=>window.print()}>Print / Export PDF</button></div>
     <div style={{display:'grid',gap:16,gridTemplateColumns:'repeat(2,1fr)'}}>
       {cats.map((c,i)=>(<div key={i} style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>

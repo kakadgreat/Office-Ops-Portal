@@ -1,5 +1,6 @@
 import React from 'react'
 export default function Offices(){
+  const [showFilters,setShowFilters]=React.useState(true);
   const [data,setData]=React.useState({locations:[]})
   const [types,setTypes]=React.useState(new Set())
   React.useEffect(()=>{ fetch('/data/offices.json').then(r=>r.json()).then(setData) },[])
@@ -7,6 +8,13 @@ export default function Offices(){
   let items=(data.locations||[]); if(types.size) items=items.filter(o=>types.has(o.service))
   const Pill=({t})=>(<button className={'pill '+(types.has(t)?'on':'')} onClick={()=>toggleType(t)}>{t}</button>)
   return (<div style={{display:'grid',gap:16}}>
+  <div className='page-title'>Locations</div>
+  <div className='collapsible no-print'>
+    <div className='collapsible-header'>
+      <span>Filters</span>
+      <button className='collapse-btn' onClick={()=>setShowFilters(s=>!s)}>{showFilters?'Collapse':'Expand'}</button>
+    </div>
+    {showFilters && (<div className='collapsible-content'>
     <div className='no-print' style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
       <div style={{fontWeight:600,marginBottom:6}}>Filters</div>
       <Pill t='Primary Care'/> <Pill t='Pediatrics'/> <Pill t='MedSpa'/>

@@ -76,16 +76,7 @@
         "Make sure you hit SAVE on bottom."
       ],
       "note": "Call Ankur if you have any questions. 770-608-8199. Please do not put any other links or information in the signature. You will need to change your name and your Title part, only.",
-      "images": [
-        {
-          "src": "/assets/email_sig_1.png",
-          "caption": "Screen Shot 1"
-        },
-        {
-          "src": "/assets/email_sig_2.png",
-          "caption": "Screen Shot 2"
-        }
-      ]
+      "images": []
     }
   ]
 }

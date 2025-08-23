@@ -10,6 +10,15 @@
         {
           "name": "Flying Locksmiths (Sue Allen)",
           "phone": "678-462-9024"
+        },
+        {
+          "name": "GHS Inc HVAC (Onel Robaina)",
+          "phone": "404-509-9824"
+        },
+        {
+          "name": "The Heating and Air Company (Sam Colon)",
+          "phone": "678-500-6925",
+          "email": "theheatingandaircompanyllc@gmail.com"
         }
       ]
     },
@@ -28,6 +37,20 @@
         {
           "name": "Controlled Climate Services (HVAC)",
           "phone": "770-432-3869"
+        },
+        {
+          "name": "Plumber \u2014 Chris Amos",
+          "phone": "770-845-4664",
+          "note": "Text only; 3\u20134 day response"
+        },
+        {
+          "name": "Geek Squad \u2014 Washer/Dryer (Warranty)",
+          "note": "Acct: Dr. Anil Yadav"
+        },
+        {
+          "name": "Contractor \u2014 Korey Henkle (Advanced Systems Atlanta)",
+          "phone": "770-899-8902",
+          "email": "khenkle@advancedsystemsatlanta.com"
         }
       ]
     },
@@ -35,8 +58,21 @@
       "category": "Jasper Office",
       "vendors": [
         {
-          "name": "Sonny Galloway (GCCI Buildings)",
-          "phone": "770-296-0816"
+          "name": "Contractor \u2014 Sonny Galloway (GCCI Buildings)",
+          "phone": "770-296-0816",
+          "email": "sonny@gccibuildings.com",
+          "site": "https://gccibuildings.com/"
+        },
+        {
+          "name": "Window Blinds \u2014 S&J Installs"
+        },
+        {
+          "name": "Pest Control \u2014 Northwest Exterminating",
+          "phone": "678-383-1030"
+        },
+        {
+          "name": "Denson Heating & Air (HVAC)",
+          "phone": "706-704-1900"
         }
       ]
     },
@@ -45,11 +81,18 @@
       "vendors": [
         {
           "name": "Alliance Fire \u2014 Inspections (Canton)",
-          "phone": "678-680-5742"
+          "phone": "678-680-5742",
+          "contact": "Heather Micho",
+          "email": "HMichno@alliancefire.com"
         },
         {
           "name": "Alliance Fire \u2014 Alarm (Canton)",
-          "phone": "770-554-5004"
+          "phone": "770-554-5004",
+          "contact": "Tori Taylor"
+        },
+        {
+          "name": "Cliff\u2019s Fire Extinguisher Co. (Jasper)",
+          "address": "311 Bell Park Dr, Woodstock, GA 30188"
         }
       ]
     }

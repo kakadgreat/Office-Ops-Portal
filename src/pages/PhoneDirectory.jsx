@@ -1,6 +1,8 @@
 import React from 'react'
 const ORDER=['Providers','MA','Front Desk','Spa']
 export default function PhoneDirectory(){
+  const [hiFilters,setHiFilters]=React.useState(new Set());
+  const [showFilters,setShowFilters]=React.useState(true);
   const [items,setItems]=React.useState([]); const [q,setQ]=React.useState('')
   const [loc,setLoc]=React.useState(new Set()); const [dept,setDept]=React.useState(new Set())
   const [sort,setSort]=React.useState({col:null,asc:true})
@@ -17,6 +19,38 @@ export default function PhoneDirectory(){
   const Header=({c,l})=>(<th onClick={()=>setSort({col:c,asc:sort.col===c?!sort.asc:true})} style={{cursor:'pointer',textAlign:'left',padding:'8px 12px'}}>{l}{sort.col===c?(sort.asc?' ▲':' ▼'):''}</th>)
   const Pill=({v,active,onClick})=>(<button className={'pill '+(active?'on':'')} onClick={onClick}>{v}</button>)
   return (<div style={{display:'grid',gap:16}}>
+  <div className='page-title'>Phone Directory</div>
+  <div className='collapsible no-print'>
+    <div className='collapsible-header'>
+      <span>Filters</span>
+      <button className='collapse-btn' onClick={()=>setShowFilters(s=>!s)}>{showFilters?'Collapse':'Expand'}</button>
+    </div>
+    {showFilters && (<div className='collapsible-content'>
+<div style={{display:'flex',gap:8,flexWrap:'wrap',marginBottom:8}}>
+  {['Pediatrics','Spa','Primary Care'].map(k=>{
+    const on = hiFilters.has(k);
+    
+// High-level filters
+if (hiFilters.size>0){
+  filteredRows = filteredRows.filter(r=>{
+    const role = (r.role || r.title || '').toLowerCase();
+    const dept = (r.department || '').toLowerCase();
+    let keep = true;
+    if (hiFilters.has('Pediatrics')) keep = keep && (dept.includes('peds') || dept.includes('pediatric'));
+    if (hiFilters.has('Spa')) keep = keep && dept.includes('spa');
+    if (hiFilters.has('Primary Care')){
+      const primary = ['provider','ma','front desk'];
+      keep = keep && primary.some(g=> role.includes(g));
+    }
+    return keep;
+  });
+}
+return (
+      <button key={k} className={'pill ' + (on?'on':'off')} onClick={()=>{ const n=new Set(hiFilters); on?n.delete(k):n.add(k); setHiFilters(n); }}>{k}</button>
+    );
+  })}
+  <span style={{fontSize:12,color:'#666'}}>Tip: "Primary Care" shows only roles Providers, MA, Front Desk.</span>
+</div>
     <h1 className='only-print' style={{fontSize:20,fontWeight:700}}>PMG Phone Directory</h1>
     <div className='no-print' style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
       <div style={{fontWeight:600}}>Filters</div>

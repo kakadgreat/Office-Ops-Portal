@@ -30,3 +30,21 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 html, body { max-width:100%; overflow-x:hidden; }
 .wrap-link { word-break: break-word; overflow-wrap:anywhere; }
+
+
+/* --- Sticky top nav & active pill --- */
+header, nav.topnav { position: sticky; top: 0; z-index: 40; background: #fff; }
+.nav-pill { padding: 6px 12px; border-radius: 9999px; border:1px solid #e5e7eb; background:#f9fafb; }
+.nav-pill.active { background:#e8f8e8; border-color:#86efac; font-weight:600; }
+/* Page title card */
+.page-title { background:#fff; border:1px solid #eee; border-radius:12px; padding:12px; font-weight:700; }
+/* Collapsible helpers */
+.collapse-btn { font-size:.875rem; border:1px solid #e5e7eb; border-radius:9999px; padding:4px 10px; background:#fff; cursor:pointer; }
+.collapsible { border:1px solid #eee; border-radius:12px; padding:12px; background:#fff; }
+.collapsible-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; font-weight:600; }
+.collapsible-content { }
+/* Print/PDF behavior */
+@media print {
+  .no-print { display:none !important; }
+  .collapsible-content { display:block !important; }
+}
