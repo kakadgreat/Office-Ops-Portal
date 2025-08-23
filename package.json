@@ -1,7 +1,7 @@
 {
   "name": "pmg-office-ops-portal",
   "private": true,
-  "version": "0.9.16",
+  "version": "0.9.17",
   "type": "module",
   "scripts": {
     "dev": "vite",

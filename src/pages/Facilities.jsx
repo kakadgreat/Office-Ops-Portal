@@ -18,7 +18,7 @@ export default function Facilities(){
   }).filter(cat => cat.vendors.length > 0);
 
   return (
-    <div style={{display:'grid', gap:16}}>
+    <div className="page" style={{display:'grid', gap:16}}>
       <div className="page-title">Facilities Rolodex</div>
 
       <div className="collapsible no-print">

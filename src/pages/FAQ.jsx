@@ -50,7 +50,7 @@ export default function FAQ(){
   });
 
   return (
-    <div style={{display:'grid', gap:16}}>
+    <div className="page" style={{display:'grid', gap:16}}>
       <div className="page-title">FAQ</div>
       <div className="collapsible no-print">
         <div className="collapsible-header"><span>Search & Tags</span></div>
