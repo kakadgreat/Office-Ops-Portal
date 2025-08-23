@@ -1,36 +1,36 @@
 import React from 'react'
 
 export default function Offices(){
-  const [showFilters, setShowFilters] = React.useState(true);
-  const [sites, setSites] = React.useState([]);
-  const [service, setService] = React.useState(new Set());
-  const [query, setQuery] = React.useState('');
+  const [showFilters, setShowFilters] = React.useState(true)
+  const [sites, setSites] = React.useState([])
+  const [service, setService] = React.useState(new Set())
+  const [query, setQuery] = React.useState('')
 
   React.useEffect(()=>{
     fetch('/data/offices.json').then(r=>r.json()).then(j=>{
-      const items = j.items || j || [];
-      setSites(Array.isArray(items) ? items : []);
-    }).catch(()=> setSites([]));
-  }, []);
+      const items = j.items || j || []
+      setSites(Array.isArray(items) ? items : [])
+    }).catch(()=> setSites([]))
+  }, [])
 
-  const toggle=(k)=>{ const n=new Set(service); n.has(k)?n.delete(k):n.add(k); setService(n); };
+  const toggle = (k)=>{ const n=new Set(service); n.has(k) ? n.delete(k) : n.add(k); setService(n) }
 
   const filtered = sites.filter(s=>{
-    const svc=(s.service||'').toLowerCase();
-    const name=(s.name||'').toLowerCase();
-    const addr=(s.address||'').toLowerCase();
-    const q=query.toLowerCase();
-    let ok=true;
+    const svc=(s.service||'').toLowerCase()
+    const name=(s.name||'').toLowerCase()
+    const addr=(s.address||'').toLowerCase()
+    const q=query.toLowerCase()
+    let ok=true
     if (service.size>0){
       ok = ok && (
         (service.has('Primary Care') && svc.includes('primary')) ||
         (service.has('Pediatrics') && svc.includes('pedi')) ||
         (service.has('MedSpa') && svc.includes('spa'))
-      );
+      )
     }
-    if (q) ok = ok && (name.includes(q) || addr.includes(q));
-    return ok;
-  });
+    if (q) ok = ok && (name.includes(q) || addr.includes(q))
+    return ok
+  })
 
   return (
     <div className="page" style={{display:'grid', gap:16}}>
@@ -45,12 +45,11 @@ export default function Offices(){
           <div className="collapsible-content">
             <div style={{display:'flex', gap:8, flexWrap:'wrap', marginBottom:8}}>
               {['Primary Care','Pediatrics','MedSpa'].map(k=>{
-                const on=service.has(k);
+                const on=service.has(k)
                 return <button key={k} className={'pill '+(on?'on':'off')} onClick={()=>toggle(k)}>{k}</button>
               })}
             </div>
-            <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search by location or address"
-              style={{width:'100%', maxWidth:420, border:'1px solid #e5e7eb', borderRadius:8, padding:'8px 10px'}} />
+            <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search by location or address"/>
           </div>
         )}
       </div>
@@ -58,7 +57,7 @@ export default function Offices(){
       {filtered.map((s,i)=>(
         <div key={i} className="card">
           <div style={{fontWeight:700, fontSize:16, marginBottom:8}}>{s.name}</div>
-          <table className="table-zebra">
+          <table className="table">
             <tbody>
               {s.address && <tr><td style={{width:140, fontWeight:600}}>Address</td><td>{s.address}</td></tr>}
               {s.hours && <tr><td style={{width:140, fontWeight:600}}>Hours</td><td>{s.hours}</td></tr>}
@@ -70,5 +69,5 @@ export default function Offices(){
       ))}
       {filtered.length===0 && <div style={{color:'#666'}}>No locations found.</div>}
     </div>
-  );
+  )
 }

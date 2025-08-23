@@ -1,74 +1,28 @@
 {
-  "locations": [
+  "items": [
     {
       "name": "Jasper Primary Care",
-      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group-9",
-      "address": "51 Gordon Rd, Jasper, GA 30143",
       "service": "Primary Care",
-      "providers": []
+      "address": "51 Gordon Rd, Jasper, GA 30143",
+      "hours": "Mon\u2013Fri 8\u20135",
+      "phone": "706-692-9768",
+      "link": "https://www.prestigemedicalgroup.org/locations/jasper-primary-care"
     },
     {
       "name": "Prestige Pediatrics in Jasper",
-      "url": "https://www.prestigepediatrics.org/location/jasper-pediatrics",
-      "address": "53 Gordon Road, Suite 101, Jasper, GA 30143",
       "service": "Pediatrics",
-      "providers": []
-    },
-    {
-      "name": "Jasper MedSpa",
-      "url": "https://www.prestigemedspa.org/locations",
-      "address": "51 Gordon Rd, Jasper, GA 30143",
-      "service": "MedSpa",
-      "providers": []
-    },
-    {
-      "name": "Canton Primary Care (Sixes)",
-      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group-1",
-      "address": "3755 Sixes Rd, Suite 300, Canton, GA 30114",
-      "service": "Primary Care",
-      "providers": []
-    },
-    {
-      "name": "Prestige Pediatrics in Canton",
-      "url": "https://www.prestigepediatrics.org/location/3755-sixes-rd-suite-101",
-      "address": "3755 Sixes Road, Suite 101, Canton, GA 30114",
-      "service": "Pediatrics",
-      "providers": []
+      "address": "53 Gordon Rd, Suite 101, Jasper, GA 30143",
+      "hours": "Mon\u2013Fri 8\u20135",
+      "phone": "706-692-9768",
+      "link": "https://www.prestigepediatricsga.com/"
     },
     {
       "name": "Canton MedSpa (Sixes)",
-      "url": "https://www.prestigemedspa.org/location/canton",
-      "address": "3755 Sixes Rd, Suite 303, Canton, GA 30114",
       "service": "MedSpa",
-      "providers": []
-    },
-    {
-      "name": "Roswell Primary Care",
-      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group",
-      "address": "12020 Etris Rd, Suite B110-A, Roswell, GA 30075",
-      "service": "Primary Care",
-      "providers": []
-    },
-    {
-      "name": "Roswell MedSpa",
-      "url": "https://www.prestigemedspa.org/locations",
-      "address": "12020 Etris Road, Suite B110-B, Roswell, GA 30075",
-      "service": "MedSpa",
-      "providers": []
-    },
-    {
-      "name": "Rome Primary Care",
-      "url": "https://www.prestigemedicalgroup.org/location/prestige-medical-group-1-9",
-      "address": "415 E 2nd Ave, Suite A, Rome, GA 30161",
-      "service": "Primary Care",
-      "providers": []
-    },
-    {
-      "name": "Rome MedSpa",
-      "url": "https://www.prestigemedspa.org/locations",
-      "address": "415 E 2nd Ave, Suite A, Rome, GA 30161",
-      "service": "MedSpa",
-      "providers": []
+      "address": "2275 Marietta Hwy, Canton, GA 30114",
+      "hours": "Mon\u2013Sat",
+      "phone": "770-926-6363",
+      "link": "https://www.prestigemedspa.org/"
     }
   ]
 }

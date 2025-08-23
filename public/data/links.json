@@ -1,25 +1,58 @@
 {
-  "links": {
-    "primary": "https://www.prestigemedicalgroup.org/locations",
-    "spa": "https://www.prestigemedspa.org/locations",
-    "peds": "https://www.prestigepediatrics.org/locations"
-  },
-  "social": {
-    "primary": [
-      "https://www.instagram.com/pmg_ga",
-      "https://www.youtube.com/@PrestigeMedGroup",
-      "https://x.com/pmg_ga",
-      "https://www.facebook.com/prestigemedicalgroup"
+  "quick": [
+    {
+      "label": "Primary Care Website",
+      "href": "https://www.prestigemedicalgroup.org/"
+    },
+    {
+      "label": "Spa Website",
+      "href": "https://www.prestigemedspa.org/"
+    },
+    {
+      "label": "Pediatrics Website",
+      "href": "https://www.prestigepediatricsga.com/"
+    }
+  ],
+  "byRole": {
+    "Front Desk": [
+      {
+        "label": "Heartland HCM (Schedules & Clock)",
+        "href": "https://heartlandhcm.com/login"
+      },
+      {
+        "label": "Fax Portal (Nextiva)",
+        "href": "https://vfax.nextiva.com/xauth/"
+      }
     ],
-    "spa": [
-      "https://www.youtube.com/@PrestigeMedSpas",
-      "https://www.tiktok.com/@prestigemedspakim",
-      "https://www.instagram.com/prestigemedspas/?hl=en",
-      "https://www.facebook.com/prestigemedspas"
+    "MA": [
+      {
+        "label": "Epic Help Desk",
+        "href": "https://epic.com"
+      },
+      {
+        "label": "Supply Ordering Form",
+        "href": "/form/order-supplies"
+      }
     ],
-    "peds": [
-      "https://www.facebook.com/prestigepediatrics",
-      "https://www.instagram.com/prestigepediatrics/"
+    "Provider": [
+      {
+        "label": "Provider Handbook",
+        "href": "#"
+      },
+      {
+        "label": "Time Off Request",
+        "href": "/form/time-off"
+      }
+    ],
+    "Spa": [
+      {
+        "label": "MedSpa Website",
+        "href": "https://www.prestigemedspa.org/"
+      },
+      {
+        "label": "Marketing Assets",
+        "href": "#"
+      }
     ]
   }
 }

@@ -1,32 +1,42 @@
-import Gallery from './pages/Gallery'
 import React from 'react'
-import { Routes, Route, NavLink } from 'react-router-dom'
-import Dashboard from './pages/Dashboard.jsx'
-import Offices from './pages/Offices.jsx'
-import Facilities from './pages/Facilities.jsx'
-import PhoneDirectory from './pages/PhoneDirectory.jsx'
-import PhoneDirectoryEdit from './pages/PhoneDirectoryEdit.jsx'
-import FAQ from './pages/FAQ.jsx'
-const NavItem=({to,label,extra=''})=>(<NavLink to={to} className='pill' style={{textDecoration:'none',marginRight:8,background:to==='/'?'#ecfdf5':'#fff'}}>{label}</NavLink>)
+import { Routes, Route, useLocation, Link } from 'react-router-dom'
+import Dashboard from './pages/Dashboard'
+import Offices from './pages/Offices'
+import Rolodex from './pages/Rolodex'
+import Gallery from './pages/Gallery'
+import FormFacility from './pages/forms/FormFacility'
+import FormSupplies from './pages/forms/FormSupplies'
+import FormTimeOff from './pages/forms/FormTimeOff'
+import Thanks from './pages/forms/Thanks'
+
+function Nav(){
+  const location = useLocation()
+  const active = (p)=> location.pathname===p ? 'nav-pill active' : 'nav-pill'
+  return (
+    <nav className="top">
+      <span className="brand">PMG Ops Portal</span>
+      <Link to="/" className={active('/')}>Dashboard</Link>
+      <Link to="/locations" className={active('/locations')}>Locations</Link>
+      <Link to="/rolodex" className={active('/rolodex')}>Facilities Rolodex</Link>
+      <Link to="/gallery" className={active('/gallery')}>Gallery</Link>
+    </nav>
+  )
+}
+
 export default function App(){
-  return (<div>
-    <header style={{position:'sticky',top:0,background:'#fff',borderBottom:'1px solid #eee',padding:12,zIndex:5}}>
-      <div style={{maxWidth:1000,margin:'0 auto',display:'flex',gap:8,alignItems:'center',flexWrap:'wrap'}}>
-        <div style={{fontWeight:700}}>PMG Ops Portal</div>
-        <nav className='topnav' style={{display:'flex',gap:8,flexWrap:'wrap'}}>
-          <NavItem to='/' label='Dashboard'/>
-          <NavItem to='/offices' label='Locations'/>
-          <NavItem to='/facilities' label='Facilities Rolodex'/>
-          <NavItem to='/phone' label='Phone Directory'/>
-          <NavItem to='/faq' label='FAQ'/>
-          <a href='/gallery' className='nav-pill'>Gallery</a>
-</nav>
-      </div>
-    </header>
-    <main style={{maxWidth:1000,margin:'0 auto',padding:16}}>
-      \1
-        <Route path='/gallery' element={<Gallery/>} />
-      \2
-    </main>
-  </div>)
+  return (
+    <>
+      <Nav/>
+      <Routes>
+        <Route path="/" element={<Dashboard/>} />
+        <Route path="/locations" element={<Offices/>} />
+        <Route path="/rolodex" element={<Rolodex/>} />
+        <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/form/facility-issue" element={<FormFacility/>} />
+        <Route path="/form/order-supplies" element={<FormSupplies/>} />
+        <Route path="/form/time-off" element={<FormTimeOff/>} />
+        <Route path="/thanks" element={<Thanks/>} />
+      </Routes>
+    </>
+  )
 }
