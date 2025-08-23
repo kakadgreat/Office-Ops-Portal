@@ -75,7 +75,7 @@ export default function Dashboard(){
   },[])
 
   const LinkList=({title,site,arr=[]})=>(
-    <div style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+    <div className='card' style={{border:'1px solid #eee',borderRadius:12,padding:12}}>
       <div style={{fontWeight:600,marginBottom:6}}>{title}</div>
       <div style={{marginBottom:8}}><a href={site} target='_blank' rel='noreferrer'>Open {title}</a></div>
       <table className='table-zebra' style={{width:'100%',fontSize:14}}>
@@ -97,12 +97,13 @@ export default function Dashboard(){
 
   return (
     <div style={{display:'grid',gap:16}}>
+  <div className='page-title'>Dashboard</div>
       <div style={{display:'grid',gap:16,gridTemplateColumns:'repeat(4,1fr)'}}>
         <div style={{gridColumn:'span 2',background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
           <div style={{fontWeight:600,marginBottom:6}}>Events (from internal guide)</div>
           <ul>{events.map((e,i)=>(<li key={i}><b>{e.title}</b>{e.date?' — '+e.date:''}</li>))}</ul>
         </div>
-        <div style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+        <div className='card' style={{border:'1px solid #eee',borderRadius:12,padding:12}}>
           <div style={{fontWeight:600}}>Quick Links</div>
           <div style={{marginTop:8}}>
             <div style={{fontWeight:600}}>Website</div>
@@ -115,7 +116,7 @@ export default function Dashboard(){
             <ul><li><a href='https://heartlandhcm.com/login' target='_blank' rel='noreferrer'>Heartland HCM Login</a> — View schedules and clock in/out.</li></ul>
           </div>
         </div>
-        <div style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+        <div className='card' style={{border:'1px solid #eee',borderRadius:12,padding:12}}>
           <div style={{fontWeight:600}}>Contact IT</div>
           <div><b>Inacomp — 770-255-1022</b><div style={{fontSize:14,color:'#555'}}>Windows & email password reset; computer & printer issues</div></div>
           <div style={{marginTop:8}}><b>Epic Help Desk — 404-605-3000</b> <span style={{fontSize:12,color:'#666'}}>(tell them we are part of Epic Community Connect)</span><div style={{fontSize:14,color:'#555'}}>Epic password reset; Epic issues</div></div>
@@ -125,7 +126,7 @@ export default function Dashboard(){
         <LinkList title='Primary Care' site={links.primary} arr={social.primary||[]}/>
         <LinkList title='Spa' site={links.spa} arr={social.spa||[]}/>
         <LinkList title='Pediatrics' site={links.peds} arr={social.peds||[]}/>
-        <div style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
+        <div className='card' style={{border:'1px solid #eee',borderRadius:12,padding:12}}>
           <div style={{fontWeight:600}}>Pediatric After Hours Advice Line</div>
           <div>(770) 851-9947 — Weekdays 5–10 PM • Weekends 8 AM–10 PM</div>
         </div>

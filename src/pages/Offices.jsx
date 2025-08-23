@@ -3,7 +3,7 @@ import React from 'react'
 export default function Offices(){
   const [showFilters, setShowFilters] = React.useState(true);
   const [sites, setSites] = React.useState([]);
-  const [service, setService] = React.useState(new Set()); // Primary Care, Pediatrics, MedSpa
+  const [service, setService] = React.useState(new Set());
   const [query, setQuery] = React.useState('');
 
   React.useEffect(()=>{
@@ -17,7 +17,7 @@ export default function Offices(){
   };
 
   const filtered = sites.filter(s=>{
-    const svc = (s.service||'').toLowerCase(); // expect 'primary', 'pediatrics', 'medspa'
+    const svc = (s.service||'').toLowerCase();
     const name = (s.name||'').toLowerCase();
     const addr = (s.address||'').toLowerCase();
     const q = query.toLowerCase();
@@ -64,15 +64,15 @@ export default function Offices(){
         )}
       </div>
 
-      <div style={{display:'grid', gap:12, gridTemplateColumns:'repeat(auto-fill, minmax(280px, 1fr))'}}>
+      <div className="tiles">
         {filtered.map((s, i)=>(
-          <div key={i} style={{background:'#fff', border:'1px solid #eee', borderRadius:12, padding:12}}>
-            <div style={{fontWeight:600, marginBottom:4}}>{s.name}</div>
-            {s.address && <div style={{fontSize:14, color:'#555'}}>{s.address}</div>}
-            {s.hours && <div style={{fontSize:13, color:'#666', marginTop:6}}>{s.hours}</div>}
-            <div style={{marginTop:8}}>
-              {s.link && <a href={s.link} target="_blank" rel="noreferrer">Open location page</a>}
+          <div key={i} className="tile">
+            <div>
+              <div style={{fontWeight:700, marginBottom:4}}>{s.name}</div>
+              {s.address && <div style={{fontSize:13, opacity:.85}}>{s.address}</div>}
+              {s.hours && <div style={{fontSize:12, opacity:.8, marginTop:6}}>{s.hours}</div>}
             </div>
+            <div>{s.link && <a href={s.link} target="_blank" rel="noreferrer">Open</a>}</div>
           </div>
         ))}
         {filtered.length===0 && <div style={{color:'#666'}}>No locations match your filters.</div>}

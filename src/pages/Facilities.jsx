@@ -1,27 +1,76 @@
 import React from 'react'
+
 export default function Facilities(){
-  const [showFilters,setShowFilters]=React.useState(true);
-  const [cats,setCats]=React.useState([])
-  React.useEffect(()=>{ fetch('/data/facilities.json').then(r=>r.json()).then(j=> setCats(j.categories||[])) },[])
-  return (<div style={{display:'grid',gap:16}}>
-  <div className='page-title'>Facilities Rolodex</div>
-  <div className='collapsible no-print'>
-    <div className='collapsible-header'>
-      <span>Filters</span>
-      <button className='collapse-btn' onClick={()=>setShowFilters(s=>!s)}>{showFilters?'Collapse':'Expand'}</button>
+  const [showFilters, setShowFilters] = React.useState(true);
+  const [data, setData] = React.useState({ categories: [] });
+  const [q, setQ] = React.useState('');
+
+  React.useEffect(()=>{
+    fetch('/data/facilities.json').then(r=>r.json()).then(j=> setData(j||{categories:[]}));
+  },[]);
+
+  const filteredCats = (data.categories || []).map(cat => {
+    const vendors = (cat.vendors || []).filter(v => {
+      const hay = [v.name, v.phone, v.email, v.address, v.contact, v.note, v.site].filter(Boolean).join(' ').toLowerCase();
+      return hay.includes(q.toLowerCase());
+    });
+    return { ...cat, vendors };
+  }).filter(cat => cat.vendors.length > 0);
+
+  return (
+    <div style={{display:'grid', gap:16}}>
+      <div className="page-title">Facilities Rolodex</div>
+
+      <div className="collapsible no-print">
+        <div className="collapsible-header">
+          <span>Filters</span>
+          <button className="collapse-btn" onClick={()=>setShowFilters(s=>!s)}>
+            {showFilters ? 'Collapse' : 'Expand'}
+          </button>
+        </div>
+        {showFilters && (
+          <div className="collapsible-content">
+            <input
+              value={q}
+              onChange={e=>setQ(e.target.value)}
+              placeholder="Search vendor, contact, phone, etc."
+              style={{width:'100%', maxWidth:420, border:'1px solid #e5e7eb', borderRadius:8, padding:'8px 10px'}}
+            />
+          </div>
+        )}
+      </div>
+
+      <div style={{display:'grid', gap:16}}>
+        {filteredCats.map((cat, idx)=>(
+          <div key={idx} className="card">
+            <div style={{fontWeight:700, marginBottom:8}}>{cat.category}</div>
+            <table className="table-zebra" style={{width:'100%', fontSize:14}}>
+              <thead><tr>
+                <th style={{textAlign:'left'}}>Name</th>
+                <th style={{textAlign:'left'}}>Phone</th>
+                <th style={{textAlign:'left'}}>Email</th>
+                <th style={{textAlign:'left'}}>Notes</th>
+              </tr></thead>
+              <tbody>
+                {cat.vendors.map((v,i)=>(
+                  <tr key={i}>
+                    <td>
+                      <div style={{fontWeight:600}}>{v.name}</div>
+                      {v.contact && <div style={{fontSize:12, color:'#666'}}>Contact: {v.contact}</div>}
+                      {v.address && <div style={{fontSize:12, color:'#666'}}>{v.address}</div>}
+                      {v.site && <div style={{fontSize:12}}><a href={v.site} target="_blank" rel="noreferrer">{v.site}</a></div>}
+                    </td>
+                    <td>{v.phone || ''}</td>
+                    <td>{v.email ? <a href={`mailto:${v.email}`}>{v.email}</a> : ''}</td>
+                    <td>{v.note || ''}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+        {filteredCats.length===0 && <div style={{color:'#666'}}>No vendors match your search.</div>}
+      </div>
     </div>
-    {showFilters && (<div className='collapsible-content'>
-    <div className='no-print' style={{textAlign:'right'}}><button onClick={()=>window.print()}>Print / Export PDF</button></div>
-    <div style={{display:'grid',gap:16,gridTemplateColumns:'repeat(2,1fr)'}}>
-      {cats.map((c,i)=>(<div key={i} style={{background:'#fff',border:'1px solid #eee',borderRadius:12,padding:12}}>
-        <div style={{fontWeight:600,marginBottom:6}}>{c.category}</div>
-        {(c.vendors||[]).map((v,idx)=>(<div key={idx} style={{border:'1px solid #eee',borderRadius:10,padding:8,marginBottom:8}}>
-          <div style={{fontWeight:600}}>{v.name}</div>
-          {v.phone && <div><b>Phone:</b> {v.phone}</div>}
-          {v.email && <div><b>Email:</b> {v.email}</div>}
-          {v.notes && <div style={{color:'#555'}}>{v.notes}</div>}
-        </div>))}
-      </div>))}
-    </div>
-  </div>)
+  );
 }
